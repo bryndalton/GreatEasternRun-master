@@ -1,0 +1,163 @@
+﻿section.whatsOn {
+    background-color: $veryLightGrey;
+    padding: 1px 0 0 0;
+    margin:40px 0 0 0;
+
+    .whatsOnWrapper {
+        display: block;
+        padding: 0 40px 40px 40px;
+        max-width: 1920px;
+        overflow-y: auto;
+        margin: 0 auto;
+
+
+        .whatsOnItem {
+            position: relative;
+            width: calc(50% - 20px);
+            min-height: 25vw;
+            background-size: 100% auto;
+            background-position: center center;
+            background-color: #FFFFFF;
+            display: inline-block;
+            float: left;
+            overflow: hidden;
+
+            .whatsOnImage {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                background-size: cover;
+                background-position: center center;
+                @include transform(translateX(-50%) translateY(-50%));
+                width: 100%;
+                height: 100%;
+                @include transition($t1);
+            }
+
+            &:nth-child(odd) {
+                margin: 0 20px 40px 0;
+            }
+
+            &:nth-child(even) {
+                margin: 0 0px 40px 20px;
+            }
+
+            /*&:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 30px;
+                height: 30px;
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+            }*/
+
+            &.vivacity {
+
+                &:after {
+                    @include purpleToPinkDiag;
+                }
+            }
+
+            &.thingsToDo {
+
+                &:after {
+                    @include purpleToPinkDiag;
+                }
+            }
+
+            &.gymHealth {
+
+                &:after {
+                    @include greenToLightGreenDiag;
+                }
+            }
+
+            &.theatreShows {
+
+                &:after {
+                    @include orangeToYellowDiag;
+                }
+            }
+
+            &.librariesArchives {
+
+                &:after {
+                    @include darkBlueToBlueDiag;
+                }
+            }
+
+            &.heritage {
+
+                &:after {
+                    @include darkRedToRedDiag;
+                }
+            }
+
+            &.arts {
+
+                &:after {
+                    @include orangeToYellowDiag;
+                }
+            }
+
+            &:hover {
+                .whatsOnImage {
+                    //@include transform(translateX(-50%) translateY(-50%) scale(1.2));
+                }
+            }
+        }
+
+
+
+
+        .whatsOnBottom {
+            position: relative;
+            width: calc(100% - 20px);
+            min-height: 25vw;
+            background-size: cover;
+            background-position: center center;
+            clear: both;
+            margin: 10px 10px 20px 10px;
+        }
+
+        .whatsOnItemInfo {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+
+            @include transform(translateY(-50%));
+
+            .whatsOnInfoTitle {
+                font-size: 36px;
+                color: #FFFFFF;
+                font-weight: 900;
+                text-align: center;
+                padding: 0 20px 40px 20px;
+                width: calc(100% - 40px);
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .whatsOnBookNowButton {
+                font-size: 20px;
+                padding: 10px 20px;
+                border: 1px solid #FFFFFF;
+                border-radius: 30px;
+                display: inline-block;
+                margin: 20px 0 0 0;
+                color: #FFFFFF;
+                margin: 0 auto 20px auto;
+                cursor: pointer;
+                @include transition($t1);
+
+                &:hover {
+                    background-color: #FFFFFF;
+                    color: $purple;
+                }
+            }
+        }
+    }
+}

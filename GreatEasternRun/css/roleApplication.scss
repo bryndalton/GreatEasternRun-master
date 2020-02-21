@@ -1,0 +1,103 @@
+﻿section.roleApplication {
+    padding: 40px;
+    margin: 0px 0 0 0;
+    
+
+    .roleApplicationHeader {
+        @include purpleToPink;
+        width: calc(100% - 40px);
+        max-width: 1920px;
+        margin: 0px auto 0 auto;
+        padding: 20px;
+        color: #FFFFFF;
+
+        h4 {
+            text-align: left;
+            color: #FFFFFF;
+            margin: 0 0 20px 0;
+            font-size:24px;
+        }
+
+        .roleApplicationInfo {
+            display: flex;
+
+            .roleApplicationInforLeft {
+                width: 100%;
+
+                .location, .hours {
+                    font-family: 'StagSans-Light';
+                }
+            }
+
+            .roleApplicationInfoRight {
+                white-space: nowrap;
+
+                .applyNow, .share {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    border: 1px solid #FFFFFF;
+                    border-radius: 30px;
+                    margin: 0 0 20px 20px;
+                    cursor: pointer;
+                    @include transition($t1);
+                    color: #FFF;
+
+                    &:hover {
+                        background-color: #FFFFFF;
+                        color: $pink;
+                    }
+                }
+            }
+        }
+
+        .salary {
+            //margin: 0 0 20px 0;
+        }
+
+        .applicationButtons {
+            display: none;
+
+            .applyNow, .share {
+                display: inline-block;
+                padding: 10px 20px;
+                border: 1px solid #FFFFFF;
+                border-radius: 30px;
+                margin: 0 20px 20px 0;
+                cursor: pointer;
+                @include transition($t1);
+
+                &:hover {
+                    background-color: #FFFFFF;
+                    color: $pink;
+                }
+            }
+        }
+    }
+
+    .roleApplicationInner {
+        padding: 20px 0;
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        font-size:16px;
+        line-height:21px;
+        .formRow {
+            label {
+                color: $textDark;
+            }
+
+            p {
+                margin: 20px 0;
+                text-align: left;
+                font-family: 'StagSans-Light';
+            }
+
+            ul, ol {
+                li {
+                    color: $textDark;
+                    font-family: 'StagSans-Light';
+                }
+            }
+        }
+    }
+}

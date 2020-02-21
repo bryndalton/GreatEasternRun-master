@@ -1,0 +1,2013 @@
+﻿@media all and (min-width:1680px){
+    section.errorHeader.comingSoon .errorHeaderInner .errorTitles .errorOops {
+        font-size:300px;
+        line-height:unset;
+    }
+}
+
+@media all and (max-width:1670px) {
+    .menuModal {
+        .closeModal {
+            right: 20px;
+        }
+
+        .menuModalInner {
+            .menuModalItem {
+                max-width: 190px;
+            }
+        }
+    }
+    
+}
+
+@media all and (max-width:1280px) {
+
+    .menuModal {
+        .menuModalInner {
+            .menuModalItem {
+                max-width: 150px;
+
+                .menuModalItemTop {
+                    .menuModalItemIcon {
+                        padding: 0 15px 40px 15px;
+                        margin: 0 auto;
+                    }
+
+                    .menuModalItemTitle {
+                        height:55px;
+                        font-size:20px;
+                    }
+                }
+            }
+        }
+    }
+    section.dontMiss {
+        .dontMissWrapper {
+            .dontMissGroup {
+                .dontMissItem:nth-child(4){
+                    display:none;
+                }
+            }
+        }
+    }
+
+    section.homeVideo {
+        .videoWrapper {
+            iframe {
+                width:320px;
+                height:100%;
+            }
+        }
+    }
+
+    section.bookableEventTable .bookableEventTableInner, section.timetable .timetableInner {
+        .weekdays {
+            flex-wrap: wrap;
+
+            .day {
+                width: calc(25% - 5px);
+                flex-basis: auto;
+            }
+        }
+
+        .venueTabs {
+            flex-wrap: wrap;
+
+            .venueTab {
+                width: calc(25% - 7px);
+                flex-basis: auto;
+            }
+        }
+
+        table.eventTable {
+            width: 100%;
+
+            tr td span.info .desc {
+                left: calc(50% + 70px);
+            }
+        }
+    }
+
+    section.timetable .timetableInner {
+        .venueSelection .venueTabs {
+            flex-wrap: wrap;
+
+            .venueTab {
+                margin-right: 0;
+
+                & + .venueTab {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:1024px){
+    header.header {
+        display: block;
+        padding: 0 0 20px 0;
+        width: 100%;
+
+        .logoMenuWrapper {
+            .logoWrapper {
+                //width: calc(50% - 40px);
+                display: inline-block;
+                margin: 20px 40px 0 0px;
+                float: left;
+            }
+
+            .navIcons {
+                width: calc(50% - 10px);
+                float: left;
+                margin: 20px 0px 0 10px;
+                display: inline-block;
+
+                .navIcon {
+                    //margin: 10px 0 0px 10px;
+                }
+
+                
+            }
+        }
+    }
+
+    .menuModal {
+        .menuModalInner {
+            .menuModalItem {
+                max-width:110px;
+            }
+        }
+    }
+
+	.signUpModal {
+		.modalInner {
+			margin: 60px auto;
+			width: calc(100% - 200px);
+
+			img {
+				max-height: calc(100vh - 120px)!important;
+			}
+		}
+	}
+
+    section.memberOptions {
+        .memberOptionsInner {
+            .membershipOptionTab {
+                text-align:left;
+                &.optionSelected {
+                    display: block;
+                    .membershipOptionWrapper {
+                        display:inline-block;
+                        &.selected {
+                            display:flex;
+                        }
+                        &.hidden {
+                            display:none;
+                        }
+                    }
+                }
+
+                .membershipOptionWrapper {
+                    display:inline-block;
+                    
+                    .membershipOption {
+                        display:inline-block;
+                    }
+                    .membershipInfoBody {
+                        column-count: 1;
+                    }
+                }
+            }
+        }
+    }
+
+        section.whatsOn {
+            .whatsOnWrapper {
+                .whatsOnItemInfo {
+                    .whatsOnInfoTitle {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+        section.dontMiss {
+            .dontMissWrapper {
+                .dontMissGroup {
+                    .dontMissItem:nth-child(3) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    section.teamMembers {
+        .teamMembersInner {
+            .teamMember {
+                width: calc(((100vw - 90px) / 2) - 29px);
+                height: calc(((100vw - 90px) / 2) - 29px);
+
+                &:nth-child(3n+2) {
+                    margin: 0 0;
+                }
+
+                &:nth-child(odd) {
+                    margin: 0 20px 40px 0;
+                }
+
+                &:nth-child(even) {
+                    margin: 0 0 40px 20px;
+                }
+            }
+        }
+    }
+
+    section.whyJoin {
+        overflow:auto;
+        .whyJoinInner {
+            display:block;
+            overflow:auto;
+            .whyJoinItem {
+                width:calc(50% - 40px);
+                height:calc(50vw - 80px);
+                float:left;
+                &:nth-child(3n+1){
+                    background-color:$purple;
+                    color:#FFFFFF;
+                    p{
+                        color:#FFFFFF;
+                    }
+
+                }
+                &:nth-child(3n){
+                    background-color:#FFFFFF;
+                    color:$purple;
+                    p{
+                        color:$purple;
+                    }
+                }
+            }
+        }
+    }
+
+    section.FAQLandingPage, section.legalLayout {
+        .FAQLandingPageInner {
+            .FAQLandingPageLeft {
+                padding: 40px 20px 20px 20px;
+                width: 160px;
+                min-width: 160px;
+                max-width: 160px;
+            }
+        }
+    }
+
+    section.currentRoles {
+        .currentRolesInner {
+            .currentRolesItem {
+                width: calc(((100vw - 80px) / 2) - 59px);
+                height: calc(((100vw - 80px) / 2) - 59px);
+                &:nth-child(3n + 2) {
+                    margin: 0 0 20px 0;
+                }
+                
+                &:nth-child(even){
+                    margin:0 0 20px 20px;
+                }
+            }
+        }
+    }
+
+    section.venueInfo {
+        .venueInfoInner {
+            .venueFeatures {
+                display: block;
+
+                .openingCol {
+                    width: calc(50% - 20px);
+                    display: inline-block;
+                    margin:0 10px 20px 0;
+                }
+
+                .featuresCol {
+                    width: calc(50% - 10px);
+                    display: inline-block;
+                    ul {
+                        column-count:1;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .footerMain {
+            .footerColumns {
+                display: block;
+
+                .footerLeft {
+                    margin-bottom: 40px;
+                }
+
+                .footerCenter {
+                    width: calc(50% - 80px);
+                    display: inline-block;
+                    float: left;
+                }
+
+                .footerRight {
+                    text-align: right;
+                    width: 50%;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:840px) {
+    footer {
+        .footerBottom {
+            display:block;
+            .footerBottomLeft {
+                //text-align:center;
+                margin-bottom:20px;
+            }
+            .footerBottomRight {
+                text-align:center;
+            }
+        }
+    }
+}
+
+@media all and (max-width:768px) {
+    body {
+        .main {
+            padding-top: 0 !important;
+        }
+    }
+
+    header.header {
+        position: relative;
+
+        .logoMenuWrapper {
+            .searchIconWrapper {
+                margin:0 10px 0 0;
+                width:auto;
+                display:inline-block;
+            }
+            .logoWrapper {
+                margin:20px 10px 0 0;
+            }
+
+            .navIcons {
+                width: 100%;
+                    margin:20px 0 0 0;
+
+                .contactUs {
+                    margin: 10px 0 20px 10px;
+                }
+
+                .menuIcon, .navIcon {
+                    margin: 10px 0 20px 20px;
+                }
+            }
+        }
+    }
+    .menuModal {
+        .closeModal {
+            right: 15px;
+            padding: 15px 15px 50px 15px;
+        }
+
+        .menuModalItem {
+            padding: 0 0 20px 0;
+            max-width:90px;
+
+            .menuModalItemTop {
+                padding: 0 0 0 0;
+                //display:flex;
+                align-items: center;
+
+                a.nav-link {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .menuModalItemIcon {
+                    padding: 0 30px 0px 30px;
+                    background-position: center center;
+                    background-size: 80% 80%;
+                    height: 60px;
+                    width:80px;
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                .menuModalItemTitle {
+                    //margin:0 20px 0 20px;
+                    //text-align:left;
+                    display: inline-block;
+                    width: auto;
+                    font-size:18px;
+                }
+            }
+
+            .subMenu {
+                margin-top: 20px;
+            }
+
+            .subMenuOpenIcon {
+                margin: 20px auto;
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+	.signUpModal {
+		.modalInner {
+			margin: 60px auto;
+			width: calc(100% - 140px);
+		}
+	}
+
+    section.bookableEventTable .bookableEventTableInner, section.timetable .timetableInner {
+        table.eventTable {
+            tbody tr td, thead tr td {
+                padding: 5px 10px;
+
+                span.info .desc {
+                    left: 50%;
+                }
+            }
+        }
+    }
+
+    section.roleApplication {
+        padding: 20px;
+
+        .roleApplicationHeader {
+            .roleApplicationInfo {
+                display: block;
+
+                .roleApplicationInforLeft {
+                    margin: 0 0 20px 0;
+                }
+
+                .roleApplicationInfoRight {
+                    display: none;
+                }
+            }
+
+            .salary {
+                margin: 0 0 20px 0;
+            }
+
+            .applicationButtons {
+                display:block;
+            }
+        }
+
+        .roleApplicationInner {
+            padding: 20px 0;
+        }
+    }
+
+    .ticketWrapper {
+        .ticketInfo {
+            flex-wrap: wrap;
+
+            .column {
+                border-right: 0;
+                width: calc(50% - 41px);
+
+                &:nth-child(3n) {
+                    border-left: 0;
+                }
+            }
+        }
+    }
+
+    section.slideshow {
+        height: auto;
+        overflow:visible;
+
+        .section__hero-content {
+            padding: 70px 0 0 0;
+
+            h1 {
+                padding: 0 20px;
+            }
+
+            form.headerSearchForm {
+                padding: 0 10px;
+                //display: block;
+
+                select.typeSelect {
+                    padding: 0 10px 0 10px;
+                    width: 100%;
+                    height: 60px;
+                    border-bottom-left-radius: 0;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                }
+
+                input.searchInput {
+                    width: calc(100% - 142px);
+                    float: left;
+                    //border-bottom-left-radius: 15px;
+                }
+
+                button {
+                    height: 60px;
+                    //border-bottom-right-radius: 15px;
+                    //border-top-right-radius: 0;
+                }
+            }
+        }
+
+        .slideshowOuter {
+            /*height: 300px;*/
+           
+            .slideshowWrapper {
+                height:100%;
+            }
+        }
+
+        .headerAnnouncement {
+            padding: 180px 10px 20px 10px;
+            text-align: center;
+            position: relative;
+            width:calc(100% - 20px);
+
+            .announcementTitle {
+                font-size: 18px;
+            }
+        }
+    }
+
+    section.whatsOn {
+        .whatsOnWrapper {
+            padding: 10px;
+
+            .whatsOnItem {
+                width: 100%;
+                margin: 0 0 20px 0;
+                min-height: 40vw;
+
+                &:nth-child(odd), &:nth-child(even) {
+                    margin: 0 0 20px 0;
+                }
+            }
+        }
+    }
+
+        section.homeVideo {
+            display: block;
+            padding: 10px 10px;
+
+            .videoWrapper {
+                iframe {
+                    width: 100%;
+                    height: 370px;
+                }
+            }
+        }
+
+        section.searchHeader {
+            padding: 20px 20px 20px 20px;
+            width: calc(100% - 40px);
+            margin:0 auto 0 auto;		
+			
+			&.activityList {
+				padding: 0px 40px 0px 0px;
+			}
+
+            .searchTabsWrapper {
+                .searchBoxes {
+                    padding: 20px 0;
+
+                    .searchBox {
+                        margin: 0 20px;
+
+                        form .error-wrapper {
+                            margin-bottom: 20px;
+
+                            &.error {
+                                margin-bottom: 10px;
+                            }
+
+                            input[type=text] {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+                .searchTabs {
+                    .tab {
+                        padding: 10px 15px;
+                    }
+                }
+            }
+
+            .resultsentlter {
+                display: block;
+
+                .resultsTitle, .filterWrapper {
+                    width: 100%;
+                }
+
+                .filterBy {
+                    margin: 0 auto;
+
+                    .filterByButton {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    section.menuTabs {
+        margin: 0px 0 0 0;
+
+        .menuTabsWrapper {
+            display: block;
+
+            .menuTab {
+                width: calc(50% - 54px);
+                display: inline-block;
+
+                & + .menuTab {
+                    margin-left: 0;
+                }
+
+                &:nth-child(odd) {
+                    margin: 0 10px 20px 0;
+                }
+
+                &:nth-child(even) {
+                    margin: 0 0 20px 10px;
+                }
+
+                &.dropdown .dropdownWrapper {
+                    .menuTab {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    section.searchResultFeatured {
+        .searchResultsFeaturedInner {
+            display: block;
+
+            .featuredImage {
+                height: 60vw;
+                margin-bottom: 40px;
+            }
+
+            .featuredInfo {
+                text-align: center;
+                position: relative;
+                top: 0;
+
+                h4 {
+                    text-align: center;
+                }
+
+                .dateTime {
+                    text-align: center;
+
+                    .dateTimeInfo {
+                        width: auto;
+                    }
+                }
+
+                .directions {
+                    display: none;
+
+                    &.mobile {
+                        display: block;
+                    }
+                }
+
+                &.isMobile {
+                    display: block;
+                }
+
+                &.nonMobile {
+                    display: none;
+                }
+            }
+            .searchResultsFeaturedInnerLeft {
+                width:100%;
+            }
+            .searchResultsFeaturedInnerRight {
+                display:none;
+               
+            }
+        }
+    }
+
+    section.venueInfo {
+        .venueInfoInner {
+            .venueLocation {
+                .contactButtons {
+                    .directions {
+                        display:none;
+                        &.mobile {
+                            display:inline-block;
+                        }
+                    }
+                }
+            }
+
+            .venueFeatures {
+                display: block;
+                width: 100%;
+                .openingCol {
+                    margin:0 0 20px 0;
+                    width:100%;
+                    max-width:unset;
+                }
+                .featuresCol {
+                    width:100%;
+                    ul{
+                        column-count:2;
+                    }
+                }
+            }
+        }
+    }
+    section.teamMembers {
+        .teamMembersInner {
+            .teamMember {
+                width: calc(100vw - 90px);
+                height: calc(100vw - 90px);
+                max-width:unset;
+
+                
+
+                &:nth-child(odd) {
+                    margin: 0 0px 40px 0;
+                }
+
+                &:nth-child(even) {
+                    margin: 0 0 40px 0px;
+                }
+            }
+        }
+    }
+
+    section.headerImage {
+        min-height: unset;
+        padding: 0 40px 0 40px;
+
+        .headerImageInner {
+            min-height: 300px;
+            height: auto;
+
+            .campaignTitles {
+                position: absolute;
+                bottom: 0;
+                padding: 10px;
+                width: calc(100% - 20px);
+
+                .campaignTitle {
+                    font-size: 42px;
+                    word-break: break-word;
+                }
+            }
+        }
+    }
+
+    section.whyJoin {
+        .whyJoinInner {
+            display: block;
+
+            .whyJoinItem {
+                width: calc(100% - 40px);
+                height: auto;
+
+                &:nth-child(3n+1) {
+                    background-color: unset;
+                    color: unset;
+
+                    p {
+                        color: unset;
+                    }
+                }
+
+                &:nth-child(3n) {
+                    background-color: unset;
+                    color: unset;
+
+                    p {
+                        color: unset;
+                    }
+                }
+
+                &:nth-child(odd) {
+                    background-color: $purple;
+                    color: #FFFFFF;
+
+                    p {
+                        color: #FFFFFF;
+                    }
+                }
+
+                &:nth-child(even) {
+                    background-color: #FFFFFF;
+                    color: $purple;
+
+                    p {
+                        color: $purple;
+                    }
+                }
+            }
+        }
+    }
+
+        footer {
+            .footerMain {
+                .footerColumns {
+                    .footerCenter {
+                        margin: 0 0 0 0;
+                        width: 100%;
+                        float: none;
+                    }
+
+                    .footerRight {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    section.renderForm {
+        padding: 0 20px;
+
+        .renderFormInner {
+            form {
+                fieldset {
+                    display: contents;
+
+                    .umbraco-forms-container {
+                        &.col-md-6, &.col-md-4 {
+                            width: 100% !important;
+                            float: none !important;
+
+                            &:nth-child(even) {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+
+                .umbraco-forms-page {
+                }
+
+                .rateOurService {
+                    .ratingsInner {
+                        display: block;
+
+                        .ratings {
+                            margin: 0 0 20px 0;
+                            text-align:center;
+                        }
+
+                        .selectService {
+                            max-width:unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.FAQLandingPage, section.legalLayout {
+        margin:0 0 0 0;
+        .FAQsearchWrapper {
+                margin:0 auto 40px auto;
+                display:flex;
+        }
+        .FAQLandingPageInner {
+            display: block;
+
+            .FAQLandingPageLeft {
+                width: calc(100% - 40px);
+                min-width: unset;
+                max-width: unset;
+                margin: 0 0 40px 0;
+                column-count: 2;
+
+                .FAQLandingPageScroll {
+                    position: relative;
+                }
+            }
+
+            .FAQLandingPageRight {
+                margin: 0 0 0 0;
+            }
+        }
+    }
+
+    section.whoWeAre .whoWeAreInner {
+        .donationInfo {
+            padding:20px;
+        }
+        .donationInfo .formWrapper .formRow {
+            text-align: left;
+
+            input[type=text] {
+                margin-top: 5px;
+            }
+
+            label.donateOtherLabel {
+                margin-left: 0;
+            }
+
+            .otherAmount {
+                display: block;
+            }
+
+            button.next {
+                margin: 0 auto;
+                display: block;
+                margin-top: 5px;
+            }
+        }
+
+        .yourDetails .formWrapper {
+            width: 100%;
+        }
+    }
+    section.didYouKnow {
+        .didYouKnowInner {
+            display:block;
+            .didYouKnowLeft {
+                text-align:center;
+                width:calc(100% - 40px);
+                max-width:unset;
+                .didYouKnowIcon {
+                    margin:0 auto 20px auto;
+                }
+            }
+            .didYouKnowRight {
+                height:30vw;
+                min-height:150px;
+            }
+        }
+    }
+
+    section.errorHeader {
+        padding: 20px 10px 0 10px;
+        height: auto;
+        min-height: unset;
+
+        .errorHeaderInner {
+            height: auto;
+            padding: 20px;
+            width: calc(100% - 40px);
+
+            .errorTitles {
+                position: relative;
+                @include transform(translateX(0) translateY(0));
+                top: unset;
+                left: unset;
+            }
+        }
+    }
+
+    section.contactHeader {
+        margin-top: 0;
+    }
+
+    section.contactList {
+        .contactListItemsWrapper.selected {
+            display:block;
+        }
+    }
+
+    section.memberOptions {
+        .memberOptionsInner {
+            .membershipOptionTab.optionSelected {
+                text-align:center;
+                .membershipOptionWrapper {
+                    display: block;
+                    &.selected {
+                        display:block;
+                    }
+                    .membershipInfoWrapper {
+                        width:calc(100% - 80px);
+                        margin:0 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+
+    section.contactForm .contactFormInner {
+        width: 100%;
+        padding: 0;
+
+        form .formRow.rateOurService .ratingsInner {
+            display: block;
+
+            .selectService {
+                margin-top: 1rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media all and (max-width:640px) {
+    header.header {
+        display: block;
+
+        .logoMenuWrapper {
+            //display:block;
+            padding: 0 20px;
+
+            .searchIconWrapper {
+                .searchIcon {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                #basketValue {
+                    display: none !important;
+                }
+            }
+
+            .logoWrapper {
+                //text-align:center;
+                margin: 20px 0 0 0px;
+                //width: calc(50% - 20px);
+                .logo {
+                    //width: 140px;
+                }
+            }
+
+            .navIcons {
+                //text-align:center;
+                width: 100%;
+
+                .navIcon {
+                    margin: 10px 0 0 10px;
+                    width: 30px;
+                    height: 30px;
+
+                    &.facebook svg {
+                        margin-top: 4px;
+                    }
+                }
+
+                .contactUs {
+                    margin: 0px 0px 20px 10px;
+                }
+
+                .menuIcon {
+                    margin: 10px 0 0 10px;
+                    width: 30px;
+                    height: 30px;
+
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .menuModal {
+        .closeModal {
+            right: 0;
+            padding: 15px 15px 60px 15px;
+        }
+
+        .modalTitle {
+            width: 120px;
+            height: 60px;
+            margin: 0 0 0 20px;
+        }
+
+        .menuModalInner {
+            .menuModalItem {
+                width: 100%;
+                position: relative;
+                margin: 0 0 20px 0;
+                text-align: left;
+                border-bottom: 1px solid #FFFFFF;
+                max-width: none;
+
+                .menuModalItemTop {
+                    display: flex;
+
+                    .menuModalItemIcon {
+                        padding: 0 0 0 0;
+                        margin:0;
+                    }
+
+                    .menuModalItemTitle {
+                        text-align: left;
+                        height:auto;
+                    }
+                }
+
+                .subMenuOpenIcon {
+                    position: absolute;
+                    top: 15px;
+                    right: 20px;
+                    //@include transform(translateY(-50%));
+                    margin: 0 0;
+                }
+
+                .subMenu {
+                    margin: 20px 20px 0 20px;
+                }
+            }
+        }
+    }
+
+	.signUpModal {
+		.modalInner {
+			margin: 60px auto;
+			width: calc(100% - 40px);
+		}
+	}
+
+        section.dontMiss {
+            .dontMissWrapper {
+                .dontMissGroup {
+                    .dontMissItem:nth-child(2) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        section.venueList {
+            padding:20px;
+            .venueListInner {
+                .venueListItem {
+                    width:100%;
+                    margin:0 0 20px 0;
+                }
+            }
+        }
+
+        section.venueInfo {
+            
+            .venueInfoInner {
+                .venueFeatures {
+                    .featuresCol {
+                        ul.featuresList {
+                            column-count: 1;
+
+                            li {
+                                max-width: unset;
+                            }
+                        }
+                    }
+                }
+
+                .openingHours {
+                    display: block;
+
+                    .openingHoursLeft {
+                        width: auto;
+                        max-width: unset;
+                        min-width: unset;
+                        text-align: center;
+
+                        h4 {
+                            text-align: center;
+                        }
+                    }
+
+                    .openingHoursRight {
+                        width: auto;
+                        max-width: unset;
+                        min-width: unset;
+                        height: 60vw;
+                    }
+                }
+            }
+        }
+
+	section.searchHeader {
+
+		&.activityList {
+			padding: 0px 20px;
+			margin-bottom: -20px;
+		}
+
+		.searchTabsWrapper {
+			.searchBoxes {
+				.searchBox {
+					form {
+						display: block;
+
+						.searchIcon {
+							float: left;
+						}
+
+						input {
+							margin: 0 20px 20px 0;
+
+							&:focus {
+								outline: 0px solid transparent;
+							}
+
+							&[type="text"] {
+								width: calc(100% - 30px);
+								margin: 0 0px 20px 0;
+
+								&[name="query"] {
+									width: calc(100% - 70px);
+								}
+							}
+
+							&[type="date"] {
+								width: calc(50% - 65px);
+								margin: 0 10px 20px 0;
+								float: left;
+
+								&[name="end"] {
+									margin: 0 0 20px 0;
+								}
+							}
+
+							&[type="submit"] {
+								margin: 0 0px 20px 0;
+							}
+						}
+					}
+				}
+
+				.searchTabs {
+					display: block;
+					margin: 0 0 0 0;
+
+					.tab {
+						width: calc(100% - 30px);
+					}
+				}
+			}
+		}
+
+
+		.resultsFilter {
+			display: block;
+
+			.resultsTitle {
+				width: 100%;
+			}
+
+			.filterWrapper {
+				width: 100%;
+				justify-content: center;
+			}
+		}
+	}
+    section.searchResultFeatured {
+        padding:40px 20px;
+        .searchResultsFeaturedInner {
+            .featuredInfo {
+                h4 {
+                    font-size:30px;
+                }
+            }
+        }
+    }
+
+    .mayAlsoLike {
+        .searchResultsInner {
+            display: block;
+
+            .searchResultItem {
+                .eventInfo {
+                    flex-grow: unset;
+
+                    .eventWrapper {
+                        flex-grow: unset;
+                    }
+                }
+            }
+        }
+    }
+
+    //section.activityFilterSection {
+    #searchResults {
+        .searchResults {
+            padding: 0 20px;
+
+            .searchResultsInner {
+                display:block;
+                .searchResultItem {
+                    .eventInfo {
+                        flex-grow:unset;
+                        .eventWrapper {
+                            flex-grow:unset;
+                        }
+                    }
+                }
+            }
+
+            .bx-wrapper {
+                .bx-controls {
+                    .bx-pager {
+                        max-height: 40px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+    //}
+
+    section.menuTabs {
+        margin: 0px 0 0 0;
+        padding: 40px 20px 0 20px;
+
+        .menuTabsWrapper {
+            display: block;
+
+            .menuTab {
+                width: calc(100% - 44px);
+                display: inline-block;
+
+                & + .menuTab {
+                    margin-left: 0;
+                }
+
+                &:nth-child(odd) {
+                    margin: 0 0px 20px 0;
+                }
+
+                &:nth-child(even) {
+                    margin: 0 0 20px 0px;
+                }
+            }
+        }
+    }
+	section.bookableEventTable, section.timetable {
+		padding: 0 20px;
+
+		table {
+			thead {
+				display: none;
+
+				tr {
+					display: flex;
+
+					th {
+						width: 100%;
+					}
+				}
+			}
+
+			tbody {
+				display: block;
+				column-span: all;
+
+				tr {
+					display: block;
+					width: 60%;
+					text-align: left;
+					padding: 10px 20% 10px 20%;
+
+					td {
+						display: inline-block;
+						width: 100%;
+						padding: 2px 10px;
+
+						span.mobile {
+							display: inline !important;
+							font-weight: bold;
+							padding-right: 5px;
+						}
+
+						&.text-center {
+							width: auto;
+						}
+					}
+				}
+			}
+		}
+	}
+    section.teamMembers {
+        padding: 20px;
+
+        .teamMembersInner {
+            .teamMember {
+                width: calc(100%);
+                height: calc(100vw - 57px);
+
+                
+            }
+        }
+    }
+
+        section.memberOptions {
+            padding: 20px;
+
+            .memberOptionsInner {
+                .membershipTabs {
+                    .membershipTab {
+                        padding: 20px 20px;
+                    }
+                }
+            }
+        }
+    section.whyJoin {
+        padding:20px;
+    }
+
+    section.questionBanner {
+        .questionBannerInner {
+            display: block;
+
+            .questionBannerLeft {
+                .questionBannerTitle {
+                    margin:0 auto 20px auto;
+                    text-align:center;
+                }
+            }
+            .questionBannerRight {
+                text-align:center;
+            }
+        }
+    }
+
+    section.FAQLandingPage, section.legalLayout {
+        padding:20px;
+        .FAQLandingPageInner {
+            display: block;
+
+            .FAQLandingPageLeft {
+                
+                column-count: 1;
+            }
+
+            
+        }
+    }
+
+    section.contactList.background {
+        padding: 20px;
+
+        .contactListTabsWrapper {
+            display: block;
+            width: 100%;
+
+
+            .contactListTab {
+                width: calc(100% - 40px);
+                margin: 0 0 10px 0;
+
+                & + .contactListTab {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .contactListItemsWrapper {
+            width: 100%;
+
+            &.selected {
+                width: 100%;
+            }
+
+            .contactListItem {
+                width: calc(100% - 40px);
+
+                .contactButtons {
+                    .emailUs {
+                        margin-bottom:20px;
+                    }
+                }
+            }
+        }
+    }
+
+    section.currentRoles {
+        .currentRolesInner {
+            .currentRolesItem {
+                width: calc(((100vw - 80px)) - 50px);
+                height: calc(((100vw - 80px)) - 50px);
+
+                &:nth-child(3n + 2), &:nth-child(even) {
+                    margin: 0 0 20px 0px;
+                }
+            }
+        }
+    }
+
+    section.roleApplication {
+        text-align: center;
+
+        .roleApplicationHeader {
+            h4 {
+                text-align: center;
+            }
+
+            .roleApplicationInfo {
+
+                .roleApplicationInfoRight {
+                    .applyNow, .share {
+                        margin: 0 10px 20px 10px;
+                    }
+                }
+            }
+        }
+
+        .roleApplicationInner {
+            .formRow {
+                text-align:left;
+            }
+        }
+    }
+    section.didYouKnow {
+        padding:0 20px;
+        overflow:hidden;
+        .didYouKnowList {
+            display: block;
+
+            .didYouKnowListItem {
+                width: calc(100% - 40px);
+
+                &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                    padding: 0 20px;
+                    margin:0 0 0 0;
+                }
+            }
+        }
+    }
+    section.errorHeader {
+        padding: 20px 10px 0 10px;
+        height: auto;
+        min-height:unset;
+
+        .errorHeaderInner {
+            height:auto;
+            padding:20px;
+            width:calc(100% - 40px);
+            .errorTitles {
+                position:relative;
+                @include transform(translateX(0) translateY(0));
+                top:unset;
+                left:unset;
+            }
+        }
+    }
+}
+
+@media all and (max-width:480px) {
+    header.header {
+        padding: 0 0 0px 0;
+
+        .logoMenuWrapper {
+            display: block;
+            padding: 20px 20px 0 20px;
+
+            .searchIconWrapper {
+                padding: 0px 0 0 0;
+                position: absolute;
+                left: 20px;
+                top: 125px;
+                z-index: 2;
+                //width:30px;
+                .searchIcon {
+                    margin: 0 auto;
+                }
+            }
+
+            .logoWrapper {
+                margin: 0px 0 0 0;
+
+                .logo {
+                    //width:90px;
+                    //height:35px;
+                }
+
+                .presents {
+                    //height:14px;
+                }
+            }
+
+            .logoWrapper, .navIcons {
+                //margin: 10px 0px 0 0px;
+                width: 100%; 
+                text-align: center;
+            }
+
+            .navIcons {
+                margin: 20px 0 0 0;
+
+                .navIcon, .contactUs {
+                    //display:none;
+                    margin: 0 0 20px 0;
+
+                    &.facebook, &.twitter {
+                        display: none;
+                    }
+                }
+
+                .menuIcon {
+                    position: absolute;
+                    top: -5px;
+                    right: 20px;
+                }
+            }
+        }
+    }
+
+    section.headerImage {
+        padding:0 20px 0 20px;
+        .headerImageInner {
+            .campaignTitles {
+                position:relative;
+            }
+        }
+    }
+    .menuModal {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        //height: 100%;
+        top: 0;
+        padding: 40px 0 20px 0;
+
+        .menuModalInner {
+            margin:30px 0 0 0;
+            padding:0 30px 0 0;
+            .menuModalItem {
+                .subMenuOpenIcon {
+                    top:0;
+                }
+            }
+        }
+        &.visible {
+            .closeModal {
+                @include transform(translateY(0%));
+            }
+        }
+
+        .closeModal {
+            padding: 15px 15px 0px 15px;
+        }
+
+        .modalTitle {
+            margin: 100px auto 0 auto;
+        }
+
+        .modalButtonsBottom {
+            position: relative;
+            margin-top: 20px;
+
+            .signInButton {
+                &.mobile {
+                    display: inline-block;
+                }
+            }
+        }
+
+        .menuModalItem {
+            .menuModalItemTop {
+                .menuModalItemIcon {
+                    display: none;
+                }
+
+                .menuModalItemTitle {
+                    margin: 0 40px 0 20px;
+                }
+            }
+        }
+    }
+
+    
+    //main.home {
+    section.slideshow {
+        width: calc(100% - 40px);
+        margin: 0 20px;
+
+        .section__hero-content {
+            .searchTitle {
+                font-size:14px;
+                margin:0 auto 20px auto;
+                width:calc(100% - 10px);
+            }
+            form.headerSearchForm {
+                input.searchInput {
+                    font-size:18px;
+                }
+                button {
+                    height:53px;
+                }
+            }
+        }
+
+        .headerAnnouncement {
+            padding: 150px 10px 20px 10px;
+        }
+    }
+
+    
+
+    section.whoWeAre {
+        padding: 40px 20px 0 20px;
+
+        .whoWeAreInner {
+            .projectsListWrapper {
+                .projectListSlider {
+                    .projectItem {
+                        .projectItemWrapper {
+                            .projectItemInfo {
+                                .desc {
+                                    p {
+                                        margin: 20px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+        section.whatsOn {
+            .whatsOnWrapper {
+                .WhatsOnTop {
+                    .whatsOnTopLeft, .whatsOnTopRight {
+                        .whatsOnItemInfo {
+                            position: relative;
+
+                            .whatsOnInfoTitle {
+                                padding: 20px 20px 20px 20px;
+                            }
+                        }
+                    }
+                }
+
+                .whatsOnItemInfo {
+                    //position: relative;
+                    //@include transform(translateY(0%));
+                    .whatsOnInfoTitle {
+                        padding: 20px 20px 20px 20px;
+                    }
+                }
+            }
+        }
+
+        section.searchHeader {
+            .searchTabsWrapper {
+                .searchBoxes {
+                    .searchBox {
+                        form {
+                            input[type="date"], input[type="time"] {
+                                width: calc(100% - 60px);
+                                margin: 0 0px 20px 0;
+                                float: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .resultsFilter {
+                display:block;
+                .resultsTitle {
+                    width:100%;
+                }
+                .filterWrapper {
+                    width:100%;
+                    justify-content:center;
+                }
+            }
+        }
+
+    section.venueInfo {
+        .venueInfoInner {
+            .venueFeatures {
+                .featuresCol {
+                    .featuresList {
+                        column-count:1;
+                    }
+                }
+            }
+        }
+    }
+
+        section.renderForm {
+            .renderFormInner {
+                form {
+                    .rateOurService {
+                        .ratingsInner {
+                            .ratings {
+                                input[type="radio"] {
+                                    width:40px;
+                                    height:40px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    section.teamMembers {
+        .teamMembersInner {
+            .teamMember {
+                height: calc(100vw + 40px);
+
+                .teamMemberOverlay {
+                    .teamMemberInfo {
+                        .teamMemberBio {
+                            margin: 0 0 0 0;
+
+                            p {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+        .contactListTabsWrapper {
+            .mayAlsoLike {
+                padding: 0 20px;
+            }
+        }
+
+        footer {
+            .footerMain {
+                padding: 10px;
+                text-align: center;
+
+                .footerMainTop {
+                    .footerLogo {
+                        margin: 0 auto;
+                        background-position: center center;
+                    }
+                }
+
+                .footerCenter {
+                    max-width: unset;
+                }
+
+                .footerColumns {
+                    .footerLeft {
+                        form {
+                            display: block;
+                            text-align: center;
+
+                            input[type="text"] {
+                                width: calc(100% - 40px);
+                                margin-right: 0;
+                            }
+
+                            button {
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footerBottom {
+                padding: 20px 10px;
+
+                .footerIcons {
+                    overflow: auto;
+                    text-align: center;
+
+                    .footerIcon {
+                        float: unset;
+                        display: inline-block;
+                        margin: 0 10px 20px 10px;
+                    }
+                }
+
+                .footerLink {
+                    display: block;
+
+                    .footerBottomRight, .footerBottomLeft {
+                        text-align: center;
+
+                        ul {
+                            li {
+                                margin: 0 0 10px 0;
+                                width:100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //}
+        section.bookableEventTable .bookableEventTableInner, section.timetable .timetableInner {
+            .weekdays {
+                .day {
+                    width: calc(50% - 5px);
+                }
+            }
+
+            .venueTabs {
+                .venueTab {
+                    width: calc(50% - 7px);
+                }
+            }
+
+            table.eventTable {
+                tbody tr td, thead tr td {
+                    padding: 5px;
+
+                    position: relative;
+
+                    span.info {
+                        position: static;
+
+                        .desc {
+                            transform: none;
+                            left: 0;
+                            width: calc(100% - 1rem - 10px);
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .ticketWrapper {
+            .ticketInfo {
+                justify-content: center;
+
+                .column {
+                    border: 0;
+                    padding: 0;
+                    width: 100%;
+                    padding: 0 40px;
+                }
+            }
+        }
+
+        .featuredInfo {
+            width: 100%;
+
+            .dateTime {
+                position: relative;
+
+                .dateDropdown {
+                    position: static;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+@media all and (max-width:360px) {
+    .menuModal {
+        .menuModalItem {
+            .subMenuOpenIcon {
+                display:none;
+            }
+        }
+    }
+}
+
+@media all and (max-height:640px){
+    section.slideshow {
+        height: auto;
+        /*min-height: 100vh;*/
+
+        .slideshowOuter {
+            .slideshowWrapper {
+                .slideshowSlide {
+                    .headerAnnouncement {
+                        position: relative;
+                        padding: 200px 40px 60px 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-height:768px){
+    .menuModal {
+        .signInButton {
+            position:relative;
+            left:unset;
+            bottom:unset;
+            @include transform(translateX(0%));
+        }
+    }
+}

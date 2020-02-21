@@ -1,0 +1,27 @@
+{
+  "name": "clarityapi",
+  "version": "1.0.0",
+  "description": "React app for clarity api integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.js",
+    "build": "parcel build --no-content-hash src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.24.0",
+    "momentjs": "^2.0.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "parcel-bundler": "^1.12.3"
+  }
+}

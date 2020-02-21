@@ -1,0 +1,75 @@
+﻿section.onlineBooking {
+    padding: 2vw 40px 2vw 40px;
+    background-image: url(../Images/5.jpg);
+    background-size: cover;
+    background-position: center center;
+
+    .onlineBookingInner {
+        background-color: rgba(255,255,255,0.7);
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        h5 {
+            font-size: 20px;
+            color: $textDark;
+            margin: 20px 20px 0 20px;
+        }
+
+        p {
+            color: $textDark;
+            font-family: 'StagSans-Book';
+            margin: 20px 20px 0 20px;
+        }
+
+        form {
+            //padding: 20px;
+            border-bottom: 1px solid $textDark;
+        }
+
+        .formRow {
+            display: flex;
+            margin: 10px 20px;
+            font-family: 'StagSans-Book';
+
+            .formRowLeft {
+                width: calc(100% - 40px);
+                display: flex;
+                align-items: center;
+                color: $textDark;
+                padding: 0 20px;
+
+                label {
+                    text-align: right;
+                    margin: 0 0 0 auto;
+                }
+            }
+
+            .formRowRight {
+                width: 100%;
+
+                input {
+                    padding: 15px;
+                    width: calc(100% - 32px);
+                    border: 1px solid $textDark;
+                    color: $textDark;
+                }
+
+                button {
+                    padding: 15px;
+                    width: 100%;
+                    border: 0px solid transparent;
+                    background-color: $green;
+                    font-family: 'StagSans-Book';
+                    color: #FFFFFF;
+                    &.guest {
+                        background-color:#FFFFFF;
+                        color:$textDark;
+                        border:1px solid $textDark;
+                    }
+                }
+            }
+        }
+    }
+}

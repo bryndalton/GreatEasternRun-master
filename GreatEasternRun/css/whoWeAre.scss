@@ -1,0 +1,429 @@
+﻿/// <reference path="mixins.scss" />
+
+section.whoWeAre {
+    padding: 40px 40px 0 40px;
+
+    .whoWeAreInner {
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        p {
+            text-align: center;
+            color: $textDark;
+            font-family: 'StagSans-Light';
+        }
+
+        .projectsListWrapper {
+            text-align: center;
+            position: relative;
+            /*.sliderControls {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 200px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &.hidden {
+                    display: none;
+                }
+            }*/
+            .projectListSlider {
+                height: 100%;
+            }
+
+            .projectItem {
+                width: 300px;
+                margin: 0 1px;
+                //display: inline-block;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+                .projectItemWrapper {
+                    flex: 1;
+                    padding: 20px;
+                    background-color: $veryLightGrey;
+                }
+
+                .projectItemImage {
+                    background-color: $midGrey;
+                    background-size: cover;
+                    background-position: center center;
+                    height: 200px;
+                }
+
+                .projectItemInfo {
+                    color: $purple;
+
+                    p {
+                        color: $purple;
+                        font-size: 16px;
+                        line-height: 21px;
+                    }
+
+                    .title {
+                        margin: 0 0 20px 0;
+                    }
+
+                    .desc {
+                        font-family: 'StagSans-Light';
+                    }
+
+                    .clickHere {
+                        border: 1px solid $purple;
+                        margin: 10px;
+                        padding: 15px 20px;
+                        border-radius: 30px;
+                        display: inline-block;
+                        cursor: pointer;
+                        background: none;
+                        color: $purple;
+                        font-family: 'StagSans', sans-serif;
+                        line-height: 22px;
+                        font-size: 22px;
+
+                        @include transition($t1);
+                        opacity: 1;
+
+                        @include transition($t1) &:hover {
+                            background-color: $purple;
+                            color: #FFFFFF;
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+
+                &.selected {
+                    .projectItemWrapper {
+                        background-color: $purple;
+
+                        .projectItemInfo {
+                            color: #FFFFFF;
+
+                            p {
+                                color: #FFF;
+                            }
+
+                            .clickHere {
+                                border: 1px solid #FFFFFF;
+                                opacity: 0;
+
+                                &:hover {
+                                    background-color: #FFFFFF;
+                                    color: $purple;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sliderControls {
+                margin: 0 0 0 0;
+            }
+        }
+
+        .donationInfo {
+            padding: 40px;
+            background-color: $purple;
+            color: #FFFFFF;
+            display: none;
+
+            & + .donationInfo {
+                margin-top: 2rem;
+            }
+
+            h4 {
+                color: inherit;
+                text-align: left;
+                margin: 0;
+            }
+
+            p {
+                color: inherit;
+                text-align: left;
+                font-family: 'StagSans-Light';
+                margin: 20px 0;
+            }
+
+            hr {
+                border-top: 1px solid #FFFFFF;
+                border-bottom: none;
+            }
+
+            .projectText {
+                display: none;
+            }
+
+            .formWrapper {
+                margin: 20px 0 0 0;
+                text-align: center;
+
+                .formRow {
+                    margin-bottom: 20px;
+
+                    .otherAmount {
+                        display: inline-block;
+                    }
+
+                    label {
+                        display: inline-block;
+                        color: #FFFFFF;
+                        font-family: 'StagSans-Light';
+                        vertical-align: middle;
+
+                        &.donateAmount {
+                            padding: 10px 20px;
+                            border-radius: 30px;
+                            border: 1px solid #FFFFFF;
+                            cursor: pointer;
+                            font-family: 'StagSans-Book';
+
+                            &:hover {
+                                background-color: #FFFFFF;
+                                color: $purple;
+                            }
+                        }
+
+                        &.donateOtherLabel {
+                            margin: 0 20px;
+                        }
+                    }
+
+                    input[type="radio"] {
+                        width: 0px;
+                        height: 0px;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        padding: 0;
+                        background-size: contain;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-color: transparent;
+                        @include transition($t1);
+                        cursor: pointer;
+                        vertical-align: top;
+                        border:0px solid transparent;
+
+                        &:checked {
+                            background-color: transparent;
+
+                            & + label {
+                                background-color: #FFFFFF;
+                                color: $purple;
+                            }
+
+                            & + input[type="number"] {
+                                background-color: #FFFFFF;
+                                color: $textDark;
+                            }
+                        }
+
+                        &.donateOther {
+                            height: 37px;
+                            width: 190px;
+                            position: absolute;
+
+                            &:checked {
+                                pointer-events: none;
+                            }
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    input[type="number"], input[type="email"], select {
+                        background-color: $purple;
+                        padding: 10px 20px 10px 40px;
+                        border-radius: 30px;
+                        border: 1px solid #FFFFFF;
+                        cursor: pointer;
+                        font-family: 'StagSans-Book';
+                        //position:relative;
+                        &:focus {
+                            outline: none;
+                        }
+
+                        &:before {
+                            content: '£';
+                            position: absolute;
+                            left: 20px;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            color: #FFFFFF;
+                        }
+                    }
+
+                    button {
+                        padding: 10px 20px;
+                        border-radius: 30px;
+                        border: 2px solid #FFFFFF;
+                        display: inline-block;
+                        cursor: pointer;
+                        @include transition($t1);
+                        background-color: $purple;
+                        color: #FFFFFF;
+                        font-family: 'StagSans-Semibold';
+                        margin: 0 0 0 20px;
+
+                        &:hover {
+                            background-color: #FFFFFF;
+                            color: $purple;
+                        }
+                    }
+
+                    input[type="checkbox"] {
+                        width: 20px;
+                        height: 20px;
+                        border: 0px solid #FFFFFF;
+                        background-color: #FFFFFF;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+
+        .yourDetails {
+            background-color: $veryLightGrey;
+            color: $darkGrey;
+            padding: 40px;
+            margin-top: 2rem;
+            display: none;
+
+            h4 {
+                text-align: left;
+                margin: 0;
+            }
+
+            hr {
+                border-top: 1px solid $purple;
+                margin-bottom: 2rem;
+            }
+
+            .formWrapper {
+                margin: 0 auto;
+                width: 80%;
+
+                .formRow {
+                    & + .formRow {
+                        margin-top: 1rem;
+                    }
+
+                    label {
+                        display: block;
+                        margin-bottom: 0.5rem;
+                        color: $midGrey;
+                    }
+
+                    input, select {
+                        display: inline-block;
+                        height: 40px;
+                        border: 0;
+                        width: 100%;
+                        padding-left: 1rem;
+                        font-size: 20px;
+                        box-sizing: border-box;
+
+                        & + input {
+                            margin-top: 0.5rem;
+                        }
+                    }
+
+                    .selectWrapper {
+                        position: relative;
+                        width: 100%;
+
+                        &:focus-within {
+                            &:after {
+                                transform: scale(1, -1);
+                            }
+                        }
+
+                        &:after {
+                            content: "";
+                            color: #FFF;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            display: block;
+                            height: 40px;
+                            width: 40px;
+                            pointer-events: none;
+
+                            background: {
+                                image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16.89 8.4' style='enable-background:new 0 0 16.89 8.4;' preserveAspectRatio='xMidYMid meet' xml:space='preserve'%3E%3Cpath fill='%23FFF' d='M-0.01,0.84c0-0.08,0-0.17,0.1-0.17l0.8-0.59C0.99,0,0.99,0,1.09,0s0.2,0,0.2,0.08l7.1,7.1l7.1-7.1 C15.6,0,15.6,0,15.69,0s0.2,0,0.2,0.08l0.8,0.59c0.2,0.08,0.2,0.17,0.2,0.17c0,0.08,0,0.08-0.1,0.17l-8.1,8.11 c-0.1,0.08-0.1,0.08-0.2,0.08s-0.2,0-0.2-0.08L0.19,1C0.09,1-0.01,0.92-0.01,0.84z'/%3E%3C/svg%3E%0A");
+                                repeat: no-repeat;
+                                color: $purple;
+                                size: 25px 25px;
+                                position: center;
+                            }
+                        }
+
+                        select {
+                            appearance: none;
+                            -webkit-appearance: none;
+                            width: 100%;
+                        }
+                    }
+
+                    .gdpr {
+                        text-align: center;
+
+                        input {
+                            width: 20px;
+                            height: 20px;
+                            vertical-align: middle;
+                        }
+
+                        label {
+                            display: inline-block;
+                            margin-bottom: 0;
+                            vertical-align: middle;
+
+                            & + input {
+                                margin-left: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .continueButtonWrapper {
+            text-align: center;
+            display: none;
+
+            .continueButton {
+                background-color: #FFFFFF;
+                color: $purple;
+                padding: 16px 40px;
+                display: inline-block;
+                border-radius: 30px;
+                border: 1px solid $purple;
+                -webkit-transition: all 0.6s;
+                -ms-transition: all 0.6s;
+                -moz-transition: all 0.6s;
+                -o-transition: all 0.6s;
+                transition: all 0.6s;
+                cursor: pointer;
+                font-size: 24px;
+                margin-top: 2rem;
+
+                &:hover {
+                    background-color: $purple;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}

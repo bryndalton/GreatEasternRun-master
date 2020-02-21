@@ -1,0 +1,254 @@
+﻿.menuModal {
+    position: fixed;
+    top: 120px;
+    right: 0;
+    width: 100%;
+    //height: calc(100% - 120px);
+    z-index: 999;
+    background-color: $purple;
+    border-right: 20px solid #FFFFFF;
+    border-bottom: 20px solid #FFFFFF;
+    border-left: 20px solid #FFFFFF;
+    box-sizing: border-box;
+    @include transition($t2);
+    @include transform(translateX(100%));
+    text-align: center;
+    opacity: 0;
+    //overflow-x: hidden;
+    //overflow-y: scroll;
+    padding: 0 0 120px 0;
+    bottom: 0;
+
+    .menuModalInner {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: calc(100% - 30px);
+        margin: 30px 0px 0 0;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+            width: 10px;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #FFFFFF;
+            border-radius: 10px;
+            width: 10px;
+            margin-right: 10px;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+        width: 10px;
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #FFFFFF;
+        border-radius: 10px;
+        width: 10px;
+        margin-right: 10px;
+    }
+
+    &.visible {
+        @include transform(translateX(0%));
+        opacity: 1;
+
+        .closeModal {
+            @include transform(translateY(-100%));
+        }
+    }
+
+    .closeModal {
+        position: absolute;
+        right: calc(((100vw - 1760px)/2) + 20px);
+        top: 0px;
+        color: #FFFFFF;
+        font-size: 20px;
+        text-transform: uppercase;
+        padding: 15px 15px 45px 15px;
+        cursor: pointer;
+        background-color: $purple;
+        @include transition($t1);
+        @include transition-delay(0.6s);
+
+
+        svg {
+            position: relative;
+            width: 20px;
+            height: 20px;
+
+
+
+            path {
+                fill: #FFFFFF;
+            }
+        }
+    }
+
+    .modalTitle {
+        display: block;
+        padding: 20px;
+        text-align: center;
+        color: #FFFFFF;
+        background-image: url(../Images/vivacity-logo-white.svg);
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 200px;
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    .menuModalItem {
+        display: inline-block;
+        padding: 20px 0;
+        vertical-align: top;
+        text-align: center;
+
+
+
+        .menuModalItemTop {
+            text-align: center;
+            color: #FFFFFF;
+            padding: 0 0px 40px 0px;
+            cursor: pointer;
+            background-color: $purple;
+
+            a {
+                text-decoration: none;
+                width: 100%;
+            }
+
+            .menuModalItemIcon {
+                width: 120px;
+                height: 80px;
+                padding: 0 35px 40px 35px;
+                background-image: url(../Images/theatre.svg);
+                position: relative;
+                background-size: 80% 60%;
+                background-position: center center;
+                background-repeat: no-repeat;
+                margin: 0 auto;
+                /*&:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    height: calc(100% - 40px);
+                    width: 2px;
+                    background-color: #FFFFFF;
+                    //@include transform(translateY(-50%))
+                }*/
+            }
+
+            .menuModalItemTitle {
+                font-size: 24px;
+                color: #FFFFFF;
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                background-color: $purple;
+            }
+        }
+
+        .subMenu {
+            display: none;
+
+            a {
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+
+
+                .subMenuItem {
+                    color: #FFFFFF;
+                    margin-bottom: 15px;
+                    font-family: 'StagSans-Light';
+                    font-size: 19px;
+                    display: inline-block;
+                    margin: 0 auto 15px auto;
+                    padding: 5px 10px;
+
+                    &:hover {
+                        background-color: #FFFFFF;
+                        color: $purple;
+                    }
+                }
+            }
+        }
+
+        .subMenuOpenIcon {
+            width: 30px;
+            height: 30px;
+            margin: 0 auto 40px auto;
+            background-image: url(../Images/downchevronwhite.svg);
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            @include transition($t1);
+            cursor: pointer;
+
+            &.open {
+                @include transform(rotate(180deg));
+            }
+        }
+
+        &:last-child {
+            .menuModalItemTop {
+                .menuModalItemIcon {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .modalButtonsBottom {
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        @include transform(translateX(-50%));
+        width: 100%;
+
+        .signInButton {
+            display: inline-block;
+            padding: 10px 40px;
+            border: 1px solid #FFFFFF;
+            border-radius: 40px;
+            color: #FFFFFF;
+            cursor: pointer;
+            @include transition($t1);
+            margin: 0 10px 20px 10px;
+            vertical-align: top;
+
+            .signInButtonTop {
+                font-family: 'StagSans-Semibold';
+                font-size: 20px;
+            }
+
+            &:hover {
+                background-color: #FFFFFF;
+                color: $purple;
+            }
+
+            &.mobile {
+                display: none;
+            }
+        }
+    }
+}

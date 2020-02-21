@@ -1,0 +1,350 @@
+﻿section.memberOptions {
+    display: block;
+    padding: 0px 40px 40px 40px;
+    background-color: $purple;
+    overflow: hidden;
+
+    h4 {
+        color: #FFFFFF;
+        position: relative;
+        margin: 40px 0;
+    }
+
+    .memberOptionsInner {
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+
+
+        .membershipTabs {
+            display: block;
+            padding: 0px 0 20px 0;
+            text-align: center;
+
+            &.hidden {
+                display: none;
+            }
+
+            .membershipTab {
+                padding: 20px 40px;
+                text-align: center;
+                color: #FFFFFF;
+                border: 1px solid #FFFFFF;
+                margin: 0 5px 20px 5px;
+                ;
+                display: inline-block;
+                cursor: pointer;
+                @include transition($t1);
+
+                &.selected {
+                    background-color: #FFFFFF;
+                    color: $purple;
+                }
+
+                &:hover {
+                    background-color: #FFFFFF;
+                    color: $purple;
+                }
+            }
+        }
+
+        .membershipOptionTab {
+            display: none;
+            text-align: center;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            max-width: 1208px;
+            width: auto;
+            margin: 0 auto;
+            padding: 0 0 20px 0;
+
+            &::-webkit-scrollbar {
+                width: 10px;
+                height: 10px;
+            }
+
+            &::-webkit-scrollbar-track {
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #FFFFFF;
+            }
+
+            &.optionSelected {
+                display: flex;
+
+                .membershipOptionWrapper {
+                    .membershipOption.selected {
+                        //max-height: 470px;
+                        .membershipOptionInner {
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+            .membershipOptionWrapper {
+                display: flex;
+
+                &.hidden {
+                    display: none;
+                }
+            }
+
+            .membershipOption {
+                margin: 0 1px 20px 1px;
+                text-align: center;
+                vertical-align: top;
+                width: 300px;
+                height: 100%;
+
+                .membershipOptionInner {
+                    background-color: #FFFFFF;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                &.hidden {
+                    display: none;
+                }
+
+                .membershipType {
+                    padding: 10px 20px;
+                    color: #FFFFFF;
+
+                    &.premium {
+                        background-color: $premium;
+                    }
+
+                    &.gold {
+                        background-color: $gold;
+                    }
+
+                    &.silver {
+                        background-color: $silver;
+                    }
+
+                    &.bronze {
+                        background-color: $bronze;
+                    }
+
+                    &.other {
+                        background-color: $otherBlue;
+                    }
+                }
+
+                .membershipDetails {
+                    padding: 20px;
+                    color: $textDark;
+
+                    .title {
+                        height: 60px;
+                    }
+
+                    .overview, .detailedOverview {
+                        height: 160px;
+
+                        .title {
+                            margin-bottom: 20px;
+                        }
+
+                        .priceType {
+                            font-size: 10px;
+                        }
+
+                        .price {
+                            font-size: 60px;
+                        }
+
+                        &.hidden {
+                            display: none;
+                        }
+                    }
+                }
+
+                .joiningFee {
+                    background-color: $purple;
+                    padding: 10px;
+                    color: #FFFFFF;
+                }
+
+                .membershipLocations {
+                    color: $textDark;
+                    padding: 20px 20px 0 20px;
+                    /*height:100px;
+                    overflow:hidden;*/
+                    height: 100%;
+
+                    p {
+                        margin: 0;
+                        font-size: 14px;
+                        font-family: 'StagSans-Light';
+                    }
+                }
+
+                .buttonsWrapper {
+                    .joinOnline, .findOutMore, .enquiryNow {
+                        display: inline-block;
+                        margin: 20px auto 20px auto;
+                        border: 1px solid $purple;
+                        padding: 10px 20px;
+                        border-radius: 30px;
+                        color: $purple;
+                        @include transition($t1);
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: $purple;
+                            color: #FFFFFF;
+                        }
+                    }
+
+                    .enquiryNow {
+                        display: none;
+                    }
+                }
+
+                &.selected {
+                    .membershipLocations {
+                        height: auto;
+                    }
+
+                    .buttonsWrapper {
+                        padding: 0 0 20px 0;
+
+                        .joinOnline, .findOutMore, .enquiryNow {
+                            margin: 20px 0 0 0;
+                        }
+                    }
+                }
+
+                .corpLogoSlider {
+                    width: auto;
+                    height: 60px;
+                    padding: 0 20px 20px 20px;
+
+                    .corpLogoSliderInner {
+                        height: 60px;
+
+                        .corpLogo {
+                            background-size: contain;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            width: 100%;
+                            height: 100%;
+                            display:block;
+                        }
+                    }
+                }
+            }
+
+            .membershipInfoWrapper {
+                display: none;
+                background-color: #FFFFFF;
+                padding: 40px;
+                border-radius: 40px;
+                text-align: left;
+                margin: 0 0 0 20px;
+                width: calc(100% - 400px);
+                max-width: 900px;
+
+                .goBack {
+                    display: inline-block;
+                    margin: 20px auto 20px auto;
+                    border: 1px solid #6E2A8D;
+                    padding: 10px 20px;
+                    border-radius: 30px;
+                    color: $purple;
+                    @include transition($t1);
+                    cursor: pointer;
+                }
+
+                &.selected {
+                    display: inline-block;
+                }
+
+                .membershipInfoTitle {
+                    margin: 0 0 30px 0;
+                    font-size: 40px;
+                    color: $textDark;
+                }
+
+                .membershipInfoBody {
+                    column-count: 2;
+
+                    h4 {
+                        color: $purple;
+                        margin: 0 0 0 0;
+                        text-align: left;
+                        font-size: 20px;
+                    }
+
+                    p {
+                        text-align: left;
+                        margin: 0 0 10px 0;
+                    }
+                }
+            }
+
+            &.optionSelected {
+                //text-align: left;
+                .membershipOption {
+                    //display: none;
+                    &.selected {
+                        display: inline-block;
+                        height: auto;
+                        //float: left;
+                    }
+                }
+
+                .membershipInfoWrapper {
+                    //display: inline-block;
+                }
+
+                .membershipOptionWrapper {
+                    .membershipOption.selected {
+                        .findOutMore {
+                            display: none;
+                        }
+
+                        .enquiryNow {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.prepaidAnnualMembership {
+    padding: 40px 60px;
+    background-color: $veryLightGrey;
+    text-align: center;
+    
+    
+    .prePaid {
+        color:$purple;
+        font-size:30px;
+        font-family:'StagSans-Semibold';
+    }
+    .clickHere {
+        padding:10px 20px;
+        border:1px solid $purple;
+        color:$purple;
+        border-radius:30px;
+        display:inline-block;
+        margin:0 20px;
+        vertical-align:top;
+        cursor:pointer;
+        @include transition($t1);
+        &:hover {
+            background-color:$purple;
+            color:#FFFFFF;
+        }
+    }
+    &.hidden {
+        display:none;
+    }
+}

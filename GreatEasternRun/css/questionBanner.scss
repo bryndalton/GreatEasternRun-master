@@ -1,0 +1,42 @@
+﻿section.questionBanner {
+    background-color: $veryLightGrey;
+    padding: 20px 40px;
+    display:flex;
+
+    .questionBannerInner {
+        //width: fit-content;
+        max-width: 1920px;
+        margin: 0 auto;
+        display: flex;
+
+        .questionBannerLeft {
+            //width: 100%;
+            text-align: right;
+            color: $purple;
+            font-size: 30px;
+            margin: 0 20px 0 0;
+            display:flex;
+            align-items:center;
+            .questionBannerTitle {
+                display:inline-block;
+                margin:0 0 0 auto;
+            }
+        }
+
+        .questionBannerRight {
+            //width: 100%;
+            .questionBannerButton {
+                padding:10px 20px;
+                border:2px solid $purple;
+                border-radius:30px;
+                display:inline-block;
+                color:$purple;
+                @include transition($t1);
+                &:hover {
+                    background-color:$purple;
+                    color:#FFFFFF;
+                }
+            }
+        }
+    }
+}

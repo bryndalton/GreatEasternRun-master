@@ -1,0 +1,81 @@
+﻿section.advertisement {
+    background-size: cover;
+
+    .advertInner {
+        margin: 10vw 64px 10vw 64px;
+        width: calc(100% - 128px);
+        max-width: 362px;
+        display: inline-block;
+        color: #FFFFFF;
+
+        .advertTitle {
+            font-family: 'StagSans-Semibold';
+            font-size: 41px;
+            line-height: 40px;
+            margin-bottom: 18px;
+        }
+
+        .advertDesc {
+            font-family: 'StagSans-Book';
+            font-size: 20px;
+            margin-bottom: 38px;
+        }
+
+        .advertButton {
+            border: 1px solid #FFFFFF;
+            border-radius: 40px;
+            display: inline-block;
+            padding: 10px 28px;
+            margin-bottom: 40px;
+            color: #FFFFFF;
+            cursor: pointer;
+            @include transition($t1);
+
+            &:hover {
+                background-color: #FFFFFF;
+                color: #000000;
+            }
+        }
+
+        .advertLogo {
+            background-size: contain;
+            background-position: left center;
+            background-repeat: no-repeat;
+            height: 76px;
+        }
+    }
+
+    .bottomBanner {
+        background-color: $advertGreen;
+        padding: 20px 64px 13px 64px;
+        color: #000000;
+        text-align: center;
+
+        .bottomBannerTitle {
+            font-family: 'StagSans-Semibold';
+            font-size: 22px;
+        }
+
+        .bottomBannerDesc {
+            font-family: 'StagSans-Book';
+            font-size: 16px;
+			line-height: 21px;
+        }
+
+        .bottomBannerButton {
+            margin: 20px 0 0 0;
+            border: 1px solid #000000;
+            border-radius: 40px;
+            padding: 10px 28px;
+            display: inline-block;
+            cursor: pointer;
+            @include transition($t1);
+            color: #000000;
+
+            &:hover {
+                background-color: #000000;
+                color: $advertGreen;
+            }
+        }
+    }
+}

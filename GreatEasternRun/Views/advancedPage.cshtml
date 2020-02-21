@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModel>
+@using Umbraco.Core;
+@using Umbraco.Web;
+@using Umbraco.Web.Models;
+@using Newtonsoft.Json.Linq;
+
+@{
+	Layout = "master.cshtml";
+
+	var cacheSeconds = 0;
+}
+
+@Html.CachedPartial("Partials/pageComponents", Model.Content, cacheSeconds, true)	
+
+Matt smells

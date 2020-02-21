@@ -1,0 +1,16 @@
+﻿section.homeVideo {
+    padding: 40px 60px;
+    background-color: #FFFFFF;
+    display: flex;
+
+    .homeVideoInfo {
+        margin: 0 60px 0 0;
+        width: 100%;
+
+        h4 {
+            color: $purple;
+            text-align: left;
+            font-weight: 100;
+        }
+    }
+}

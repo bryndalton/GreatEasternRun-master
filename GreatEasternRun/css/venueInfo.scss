@@ -1,0 +1,175 @@
+﻿section.venueInfo {
+    padding: 40px;
+    background-color: #FFFFFF;
+
+    .venueInfoInner {
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        text-align: center;
+
+        .venueLocation {
+            display: inline-block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 300px;
+
+            .venueIcon {
+                background-image: url(../Images/location.svg);
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+                height: 60px;
+                margin-bottom: 20px;
+            }
+
+            .venueTitle {
+                color: $purple;
+                margin-bottom: 20px;
+                font-size: 30px;
+                font-family: 'StagSans-Semibold';
+            }
+
+            .venueAddress, .venuePhone, .venueManager {
+                color: $textDark;
+                font-family: 'StagSans-Book';
+                font-size: 14px;
+            }
+
+            .contactButtons {
+                margin: 20px 0;
+
+                .emailUs, .directions {
+                    padding: 10px 20px;
+                    display: inline-block;
+                    color: $purple;
+                    border: 1px solid $purple;
+                    border-radius: 30px;
+                    margin: 0 10px 20px 10px;
+                    cursor: pointer;
+                    @include transition($t1);
+
+                    &:hover {
+                        background-color: $purple;
+                        color: #FFFFFF;
+                    }
+
+                    &.mobile {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .venueDescription {
+            color: $textDark;
+            font-family: 'StagSans-Book';
+            font-size: 14px;
+            max-width: 960px;
+            margin: 0 auto 40px auto;
+        }
+
+        .venueFeatures {
+            display: flex;
+            text-align: left;
+            color: $textDark;
+            margin: 0 auto 40px auto;
+            justify-content: space-around;
+
+            .openingCol {
+                flex: 0 1 auto;
+                max-width:350px;
+                p {
+                    margin: 20px 0;
+                    text-align: left;
+                }
+
+                .generalTitle, .weekendTitle {
+                    font-family: 'StagSans-Medium';
+                    font-size: 20px;
+                }
+
+                ul {
+                    list-style-type: none;
+                    margin: 0 0 20px 0;
+                    padding: 0;
+
+                    li {
+                        font-family: 'StagSans-Book';
+                        color: $textDark;
+                        font-size: 16px;
+                        line-height: 21px;
+
+                        .day {
+                            display: inline-block;
+                            margin-right: 40px;
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+
+            .featuresCol {
+                flex: 0 1 auto;
+                vertical-align:top;
+
+                .featuresTitle {
+                    font-family: 'StagSans-Medium';
+                    font-size: 20px;
+                }
+
+                ul.featuresList {
+                    list-style-type: none;
+                    margin: 20px -20px;
+                    padding: 0;
+                    column-count: 2;
+
+                    li.feature {
+                        margin: 0 20px 20px 20px;
+                        max-width: 400px;
+                        display: flex;
+                        align-items: center;
+                        -webkit-column-break-inside: avoid;
+                        break-inside: avoid;
+
+                        .featureIcon {
+                            display: inline-block;
+                            width: 30px;
+                            min-width: 30px;
+                            max-width: 30px;
+                            height: 30px;
+                            background-image: url(../Images/fitnesssuite.svg);
+                            background-size: contain;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                        }
+
+                        .featureDesc {
+                            margin: 0 0 0 20px;
+                        }
+                    }
+                }
+            }
+
+            .accessibilityCol {
+                flex: 0 1 auto;
+
+                .accessibilityTitle {
+                    font-family: 'StagSans-Medium';
+                    font-size: 20px;
+                }
+
+                ul.accessibilityList {
+                    list-style-type: none;
+                    margin: 20px 0;
+                    padding: 0;
+
+                    li {
+                        margin: 0 0 5px 0;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}

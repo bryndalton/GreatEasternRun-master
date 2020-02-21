@@ -1,0 +1,273 @@
+﻿section.imageInfoSlider {
+    padding: 0 40px;
+
+    .imageInfoSliderInner {
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow:auto;
+
+        .bx-wrapper {
+            .bx-controls {
+                .bx-pager {
+                    text-align: center;
+
+                    .bx-pager-item {
+                        color: rgba($purple,0.0);
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        //background-color:$purple;
+                        display: inline-block;
+                        margin: 20px 5px;
+                        overflow: hidden;
+                        position: relative;
+
+                        a.bx-pager-link {
+                            color: transparent;
+                            background-color: rgba($purple,0.5);
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            @include transition($t1);
+
+                            &.active {
+                                background-color: $purple;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .imageInfoSliderControls {
+            display: block;
+            text-align: center;
+
+            &.hidden {
+                display: none;
+            }
+
+            .imageInfoPrev, .imageInfoNext {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background-color: $purple;
+                border-radius: 50%;
+                margin: 20px 10px;
+                border: 2px solid $purple;
+                cursor: pointer;
+                @include transition($t1);
+                position: relative;
+
+                &:hover {
+                    background-color: #FFFFFF;
+
+                    svg {
+                        path {
+                            fill: $purple;
+                        }
+                    }
+                }
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    @include transform(translateX(-50%) translateY(-50%));
+
+                    path {
+                        width: 80%;
+                        @include transition($t1);
+                    }
+                }
+
+                a {
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    &.disabled div:parent {
+                        opacity: 0.4;
+                    }
+                }
+            }
+
+            .sliderPrev:after {
+            }
+        }
+
+        .imageInfoSliderWrapper {
+            .imageInfoItem {
+                background-size: cover;
+                background-position: center center;
+                height: 40vw;
+                max-height:400px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                border-bottom: 2px solid $purple;
+
+                .imageInfoTitle {
+                    text-align: center;
+                    padding: 20px;
+                    color: #FFFFFF;
+                    width: calc(100% - 40px);
+                    z-index:2;
+                }
+
+                .imageInfoOverlay {
+                    position: absolute;
+                    padding: 20px;
+                    @include purpleToPinkDiag;
+                    height: calc(100% - 40px);
+                    width: calc(100% - 40px);
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    color: #FFFFFF;
+                    @include transition($t1);
+                    @include transform(translateY(100%));
+                    z-index: 2;
+
+                    .imageInfoOverlayInner {
+                        max-width: 300px;
+                        margin: 0 auto;
+
+                        .title {
+                            margin: 0 0 10px 0;
+                        }
+
+                        .desc {
+                            font-family: 'StagSans-Light';
+                        }
+                    }
+                }
+
+                &:hover {
+                    .imageInfoOverlay {
+                        @include transform(translateY(0%));
+                    }
+                }
+
+                /*&:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 30px;
+                    height: 30px;
+                    clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+                    @include purpleToPinkDiag;
+                    z-index:2;
+                }*/
+            }
+        }
+    }
+}
+
+body.thingsToDo {
+    section.imageInfoSlider {
+        .imageInfoSliderInner {
+            .imageInfoSliderWrapper {
+                .imageInfoItem {
+                    border-bottom: 2px solid $purple;
+
+                    &:after {
+                        @include purpleToPinkDiag;
+                    }
+
+                    .imageInfoOverlay {
+                        //@include purpleToPinkDiag;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body.gymHealth {
+    section.imageInfoSlider {
+        .imageInfoSliderInner {
+            .imageInfoSliderWrapper {
+                .imageInfoItem {
+                    border-bottom: 2px solid $green;
+
+                    &:after {
+                        //@include greenToLightGreenDiag;
+                    }
+
+                    .imageInfoOverlay {
+                        @include greenToLightGreenDiag;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body.theatreShows, body.arts {
+    section.imageInfoSlider {
+        .imageInfoSliderInner {
+            .imageInfoSliderWrapper {
+                .imageInfoItem {
+                    border-bottom: 2px solid $orange;
+
+                    &:after {
+                        //@include orangeToYellowDiag;
+                    }
+
+                    .imageInfoOverlay {
+                        @include orangeToYellowDiag;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body.librariesArchives {
+    section.imageInfoSlider {
+        .imageInfoSliderInner {
+            .imageInfoSliderWrapper {
+                .imageInfoItem {
+                    border-bottom: 2px solid $darkBlue;
+
+                    &:after {
+                        //@include darkBlueToBlueDiag;
+                    }
+
+                    .imageInfoOverlay {
+                        @include darkBlueToBlueDiag;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body.heritage {
+    section.imageInfoSlider {
+        .imageInfoSliderInner {
+            .imageInfoSliderWrapper {
+                .imageInfoItem {
+                    border-bottom: 2px solid $darkRed;
+
+                    &:after {
+                        //@include darkRedToRedDiag;
+                    }
+
+                    .imageInfoOverlay {
+                        @include darkRedToRedDiag;
+                    }
+                }
+            }
+        }
+    }
+}

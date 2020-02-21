@@ -1,0 +1,522 @@
+﻿section.searchHeader {
+    display: block;
+    margin: 0px auto 0 auto;
+    width: calc(100% - 80px);
+    max-width: 1920px;
+    padding: 0px 40px 35px 40px;
+    background-size: cover;
+    background-position: center center;
+    overflow: visible;
+
+	&.activityList {
+		padding: 0px 40px;
+		margin-bottom: -60px;
+		.resultsFilter {
+			margin: 40px 0 0 0;
+		}
+	}
+
+    h1 {
+        font-weight: 900;
+        font-size: 40px;
+        color: #FFFFFF;
+    }
+
+    p {
+        color: #FFFFFF;
+        line-height: 30px;
+    }
+
+    .searchImage {
+        height: 200px;
+
+        background: {
+            repeat: no-repeat;
+            size: cover;
+            position: center;
+        }
+    }
+
+    .searchTabsWrapper {
+
+        .searchTabs {
+            text-align: left;
+            overflow-y: auto;
+            margin: 19px 0 0 0;
+            display: flex;
+
+            .tab {
+                display: inline-block;
+                padding: 15px 20px;
+                margin: 0 0px 0 0;
+                color: $purple;
+                background-color: #FFFFFF;
+                width: 100%;
+                cursor: pointer;
+                text-align: center;
+                font-size: 16px;
+                line-height: 21px;
+
+                &.featured {
+                    background-color: $pink;
+                    color: #FFFFFF;
+                }
+
+                &.selected {
+                    background-color: rgba($darkGrey, 0.8);
+                    color: #FFFFFF;
+                }
+
+                &.thingsToDo, &.gymHealth, &.theatreShows, &.librariesArchives, &.heritage, &.arts {
+                    background-color: transparent;
+                    color: #FFFFFF;
+                }
+                /*&.gymHealth {
+                    background-color: $green;
+                    color: #FFFFFF;
+                }
+                &.theatreShows {
+                    background-color: $orange;
+                    color: #FFFFFF;
+                }
+                &.librariesArchives {
+                    background-color: $darkRed;
+                    color: #FFFFFF;
+                }
+                &.heritage {
+                    background-color: $darkBlue;
+                    color: #FFFFFF;
+                }
+                &.arts {
+                    background-color: $orange;
+                    color: #FFFFFF;
+                }*/
+            }
+        }
+
+        .searchBoxes {
+            padding: 23px 0px;
+            background-color: rgba($darkGrey, 0.8);
+            @include transition($t1);
+
+            .searchBox {
+                margin: 0 40px;
+
+                form {
+                    display: flex;
+
+                    label {
+                        display: none;
+                    }
+
+                    .searchIcon {
+                        display: inline-block;
+                        width: 40px;
+                        min-width: 40px;
+                        max-width: 40px;
+                        height: 40px;
+                        background-color: $purple;
+                        border-top-left-radius: 30px;
+                        border-bottom-left-radius: 30px;
+                        background-image: url(../Images/magnifyingglasswhite.svg);
+                        background-size: 50% auto;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        cursor: pointer;
+                        border: 0;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    input:not(.searchIcon) {
+                        padding: 8px 20px;
+                        margin: 0 20px 0 0;
+                        width: 100%;
+                        border: 0px solid transparent;
+                        border-radius: 30px;
+                        font-size: 16px;
+                        line-height: 21px;
+                        height: 24px;
+
+                        &[type="text"] {
+                            padding: 8px 20px 8px 10px;
+                            position: relative;
+                            color: $purple;
+                            border-top-left-radius: 0;
+                            border-bottom-left-radius: 0;
+
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: $purple;
+                            }
+
+                            &#searchStartDate, &#searchEndDate {
+                                border-top-left-radius: 30px;
+                                border-bottom-left-radius: 30px;
+                            }
+                        }
+
+                        &[type="date"], &[type="time"] {
+                            background-color: #FFFFFF;
+                            color: $purple;
+                            padding: 8px 10px 8px 50px;
+                            position: relative;
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                left: 20px;
+                                width: 20px;
+                                height: 20px;
+                                background-image: url(../Images/dateicon.svg);
+                                background-size: contain;
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                            }
+                        }
+
+                        &[type="submit"] {
+                            background-color: transparent;
+                            border: 1px solid #FFFFFF;
+                            text-align: center;
+                            color: #FFFFFF;
+                            @include transition($t1);
+                            cursor: pointer;
+                            height: 40px;
+
+                            &:hover {
+                                background-color: #FFFFFF;
+                                color: $purple;
+                            }
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    .error-wrapper {
+                        width: 100%;
+                        margin: 0 20px 0 0;
+                        text-align: center;
+
+                        &.error {
+                            margin-bottom: -10px;
+                        }
+
+                        input {
+                            margin-right: 0;
+                            width: calc(100% - 30px);
+                            margin-bottom: 2px;
+                        }
+
+                        label {
+                            display: none;
+                            color: #FFF;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            &.thingsToDo {
+                @include purpleToPink;
+            }
+
+            &.gymHealth {
+                @include greenToLightGreen;
+            }
+
+            &.theatreShows {
+                @include orangeToYellow;
+            }
+
+            &.heritage {
+                @include darkRedToRed;
+            }
+
+            &.librariesArchives {
+                @include darkBlueToBlue;
+            }
+
+            &.arts {
+                @include orangeToYellow;
+            }
+        }
+    }
+
+    .resultsFilter {
+        display: flex;
+        justify-content: flex-end;
+        margin: 40px 0;
+        align-items: flex-start;
+
+        &.hidden {
+            display: none;
+        }
+
+        .resultsTitle {
+            width: 50%;
+            text-align: center;
+            color: $purple;
+            font-family: 'StagSans-Semibold';
+            font-size: 30px;
+            padding: 13px 0;
+
+            .query, .tab {
+                font-style: italic;
+            }
+        }
+
+        .filterWrapper {
+            width: 25%;
+            display: flex;
+            justify-content: flex-end;
+            visibility: hidden;
+
+            &.show {
+                visibility: visible;
+            }
+        }
+
+        .filterBy {
+            display: flex;
+            //flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            width: 100%;
+            max-width: 240px;
+
+            .filterByButton {
+                padding: 20px 0;
+                color: $purple;
+                border: 1px solid $purple;
+                white-space: nowrap;
+                text-align: center;
+                cursor: pointer;
+                width: 100%;
+            }
+
+            .filterByForm {
+                background-color: $purple;
+                padding: 20px;
+                color: #FFFFFF;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                @include transform(translateY(100%));
+                width: calc(100% - 40px);
+                display: none;
+                z-index: 1;
+                min-width:165px;
+
+                .filterByFormSection {
+                    border-bottom: 1px solid #FFFFFF;
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+
+                    h4 {
+                        margin: 0;
+                        color: #FFFFFF;
+                        font-size: 20px;
+                        text-align: left;
+                        margin-bottom: 15px;
+                    }
+
+                    .priceRangeLabel {
+                        display: flex;
+                        font-weight: 100;
+                        font-size: 12px;
+                        font-family: 'StagSans-Light';
+
+                        .left {
+                            width: 100%;
+                            text-align: left;
+                        }
+
+                        .right {
+                            width: 100%;
+                            text-align: right;
+                        }
+                    }
+
+
+
+                    input[type=range] {
+                        -webkit-appearance: none;
+                        margin: 5px 0;
+                        width: 100%;
+                        overflow: hidden;
+                        padding: 0;
+                    }
+
+                    input[type=range]:focus {
+                        outline: none;
+                    }
+
+                    input[type=range]::-webkit-slider-runnable-track {
+                        width: 100%;
+                        height: 26px;
+                        cursor: pointer;
+                        background-color: #8d4b9b;
+                    }
+
+                    input[type=range]::-webkit-slider-thumb {
+                        border: 2px solid $purple;
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 30px;
+                        background-color: #FFFFFF;
+                        cursor: pointer;
+                        -webkit-appearance: none;
+                        margin-top: -2px;
+                        position: relative;
+                    }
+                    /*input [type=range]::-webkit-slider-thumb::after {
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 60px;
+                        height: 30px;
+                        background-color: #FFFFFF;
+                    }*/
+                    input[type=range]:focus::-webkit-slider-runnable-track {
+                        background-color: #8d4b9b;
+                    }
+
+                    input[type=range]::-moz-range-track {
+                        width: 100%;
+                        height: 26px;
+                        cursor: pointer;
+                        background-color: #FFFFFF;
+                    }
+
+                    input[type=range]::-moz-range-thumb {
+                        border: 2px solid $purple;
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 30px;
+                        background: #ffffff;
+                        cursor: pointer;
+                    }
+
+                    input[type=range]::-ms-track {
+                        width: 100%;
+                        height: 26px;
+                        cursor: pointer;
+                        transition: 0.2s;
+                        background: transparent;
+                        border-color: transparent;
+                        border-width: 16px 0;
+                        color: transparent;
+                    }
+
+                    input[type=range]::-ms-fill-lower {
+                        background: #8d4b9b;
+                    }
+
+                    input[type=range]::-ms-fill-upper {
+                        background: #8d4b9b;
+                    }
+
+                    input[type=range]::-ms-thumb {
+                        border: 2px solid $purple;
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 30px;
+                        background: #ffffff;
+                        cursor: pointer;
+                    }
+
+                    input[type=range]:focus::-ms-fill-lower {
+                        background: #8d4b9b;
+                    }
+
+                    input[type=range]:focus::-ms-fill-upper {
+                        background: #8d4b9b;
+                    }
+
+                    input[type="radio"] {
+                        font-family: 'StagSans-Book';
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        background: none;
+                        border: 1px solid #FFF;
+                        @include appearance(none);
+                        padding: 0;
+                        @include transition($t1);
+                        margin: 0 5px 0 0;
+
+                        &:checked {
+                            background-color: #FFF;
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    input[type="checkbox"] {
+                        font-family: 'StagSans-Book';
+                        width: 20px;
+                        height: 20px;
+                        background: none;
+                        border: 1px solid #FFF;
+                        @include appearance(none);
+                        padding: 0;
+                        @include transition($t1);
+                        margin: 0 5px 0 0;
+                        position:relative;
+
+                        &:checked {
+                            background-color: #FFF;
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+                        &:before {
+                            content:'';
+                            position:absolute;
+                            left:0;
+                            top:0;
+                            width:18px;
+                            height:18px;
+                            background-image:url(../Images/checkbox.svg);
+                            background-size:90% auto;
+                            background-position:center center;
+                            background-repeat:no-repeat;
+
+                        }
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+
+                        li {
+                            margin-bottom: 10px;
+                            font-family: 'StagSans-Light';
+                            vertical-align: top;
+
+                            input {
+                                margin: 0;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

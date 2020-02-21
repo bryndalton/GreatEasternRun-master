@@ -1,0 +1,47 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModel>
+@using Umbraco.Core;
+@using Umbraco.Web;
+@using Umbraco.Web.Models;
+@using Newtonsoft.Json.Linq;
+
+@{
+    Layout = "master.cshtml";
+
+    var faqCategories = Model.Content.Children();
+<section class="FAQLandingPage">
+    <div class="searchImage" style="background-image:url(/Images/search-top.jpg)"></div>
+    <h4>Frequently Asked Questions</h4>
+    <div class="FAQsearchWrapper">
+        <input type="text" id="FAQsearch" placeholder="filter by..." />
+        <div class="FAQsearchButton"></div>
+    </div>
+    <div class="FAQLandingPageInner">
+        <div class="FAQLandingPageLeft">
+            <div class="FAQLandingPageScroll" id="FAQLandingPageScroll">
+                @foreach (var category in faqCategories)
+                {
+                    <div data-link="#@category.Id" class="listItem notFiltered">@(category.Value("title"))</div>
+                }
+            </div>
+        </div>
+        <div class="FAQLandingPageRight">
+            @foreach (var category in faqCategories)
+            {
+                <div class="faqCategory notFiltered" id="@category.Id">
+                    <h4>@(category.Value("title"))</h4>
+
+                    @foreach (var faq in category.Children())
+                    {
+                        <div class="faqObject notFiltered" id="@faq.Id">
+                            <div class="faqObjectQuestion">@faq.Value("question")</div>
+                            <div class="faqObjectAnswer">
+                                <p>@Html.Raw(faq.Value<string>("answer"))</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</section>
+}

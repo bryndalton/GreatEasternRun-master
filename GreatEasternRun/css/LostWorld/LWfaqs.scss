@@ -1,0 +1,287 @@
+﻿.LWfaqs {
+    padding: 0 40px 40px 40px;
+    margin: 0px 0 0 0;
+    display: flow-root;
+
+    h4 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 900;
+        font-family: 'StagSans-Semibold';
+        margin: 40px;
+    }
+
+    .searchImage {
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    .FAQsearchWrapper {
+        margin: 0 auto 40px 340px;
+
+        input {
+            &[type="text"] {
+                width: calc(100% - 40px);
+                max-width: 300px;
+                padding: 20px 20px 20px 40px;
+                border: 0px solid transparent;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                background-color: $tableGreyLight;
+                font-size: inherit;
+                color: $textDark;
+                float: left;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .FAQsearchButton {
+            background-color: $veryLightGrey;
+            width: 58px;
+            height: 58px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            //border: 2px solid $purple;
+            @include transition($t1);
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+
+            &:focus, &:hover {
+                outline: none;
+                background-color: $purple;
+
+                &:after {
+                    background-image: url(../Images/magnifyingglasswhite.svg);
+                }
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-image: url(../Images/magnifyingglass.svg);
+                background-size: 60% auto;
+                background-position: center center;
+                background-repeat: no-repeat;
+                //@include transition($t1);
+            }
+        }
+    }
+
+    .LWfaqsInner {
+        display: flex;
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+
+        .FAQLandingPageLeft {
+            width: 220px;
+            min-width: 220px;
+            max-width: 220px;
+            background-color: $veryLightGrey;
+            padding: 40px 40px 40px 40px;
+            position: relative;
+
+            .FAQLandingPageScroll {
+                position: absolute;
+
+                .listItem {
+                    margin-bottom: 20px;
+                    color: $purple;
+                    cursor: pointer;
+                    display: none;
+
+                    &.notFiltered {
+                        display: block;
+                    }
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .FAQLandingPageRight {
+            width: 100%;
+            margin: 0 0 0 40px;
+
+            .faqCategory {
+                display: none;
+                margin-bottom: 40px;
+
+                &.notFiltered {
+                    display: block;
+                }
+
+                h4 {
+                    text-align: left;
+                    margin: 0 0 20px 0;
+                }
+
+                .faqObject {
+                    background-color: $purple;
+                    padding: 20px;
+                    margin: 0 0 10px 0;
+                    display: none;
+
+                    &.notFiltered {
+                        display: block;
+                    }
+
+                    .LWfaqQuestion {
+                        color: $LWyellow;
+                        padding: 0 0 0 50px;
+                        position: relative;
+                        cursor: pointer;
+
+                        .LQfaqIcon {
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background-color: $LWyellow;
+                            @include transform(translateY(-50%));
+
+                            span {
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                @include transform(translateX(-50%) translateY(-50%));
+                                width: 20px;
+                                height: 2px;
+                                @include transition($t1);
+
+                                &:last-child {
+                                    @include transform(translateX(-50%) translateY(-50%) rotate(90deg));
+                                }
+                            }
+                        }
+                    }
+
+                    &.open {
+                        .LWfaqQuestion {
+                            .LQfaqIcon {
+                                span {
+                                    &:last-child {
+                                        @include transform(translateX(-50%) translateY(-50%) rotate(0deg));
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .faqObjectAnswer {
+                        display: none;
+
+                        h1, h2, h3, h4 {
+                            color: #FFFFFF;
+                        }
+
+                        strong {
+                            color: #FFFFFF;
+                        }
+
+                        p {
+                            color: #FFFFFF;
+                            text-align: left;
+                            font-family: 'StagSans-Light';
+                            margin: 20px 0 20px 50px;
+                        }
+
+                        a {
+                            color: #FFFFFF;
+                            text-decoration: underline;
+                        }
+
+                        ul, ol {
+                            color: #FFFFFF;
+                        }
+
+                        table {
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        .LWfaqItem {
+            padding: 20px;
+            margin: 0 0 10px 0;
+
+            &.open {
+                .LWfaqQuestion {
+                    .LQfaqIcon {
+                        span {
+                            &:last-child {
+                                @include transform(translateX(-50%) translateY(-50%) rotate(0deg));
+                            }
+                        }
+                    }
+                }
+            }
+
+            .LWfaqQuestion {
+                position: relative;
+                cursor: pointer;
+
+                .LQfaqIcon {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: #FFFFFF;
+                    @include transform(translateY(-50%));
+
+                    span {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        @include transform(translateX(-50%) translateY(-50%));
+                        width: 20px;
+                        height: 2px;
+                        @include transition($t1);
+
+                        &:last-child {
+                            @include transform(translateX(-50%) translateY(-50%) rotate(90deg));
+                        }
+                    }
+                }
+
+                .LQfaqQuestionTitle {
+                    margin: 0 0 0 50px;
+                    color: #FFFFFF;
+                }
+            }
+
+            .LWfaqAnswer {
+                margin: 0 0 0 50px;
+                color: #FFFFFF;
+                display: none;
+
+                p {
+                    font-family: 'StagSans-Light';
+                }
+            }
+        }
+    }
+}

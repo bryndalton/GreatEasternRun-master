@@ -1,0 +1,109 @@
+﻿.main.scrolled {
+    .LWmobileMenu {
+        //height: calc(100% - 10vw - 40px);
+        top: calc(10vw + 40px);
+    }
+}
+
+.LWmobileMenu {
+    position: fixed;
+    width: calc(100% - 40px);
+    //height: calc(100% - 19vw - 40px);
+    right: -100vw;
+    top: calc(19vw + 40px);
+    background-color: #FFFFFF;
+    padding: 20px;
+    @include transform(translateX(100%));
+    @include transition($t1);
+    z-index: 9999;
+
+    &.visible {
+        @include transform(translateX(0));
+        right:0;
+    }
+
+    .LWmobileMenuInner {
+        background-color: $LWmidGreen;
+        color: $LWyellow;
+        position: relative;
+        height: 100%;
+        display: block;
+
+        .LWmobileMenuClose {
+            position: absolute;
+            right: 0;
+            top: 1px;
+            width: 60px;
+            height: calc(5vw + 60px);
+            background-color: $LWmidGreen;
+            @include transform(translateY(-100%));
+            cursor: pointer;
+            background-image: url(/Images/closeXyellow.svg);
+            background-size: calc(100% - 40px) auto;
+            background-position: center 20px;
+            background-repeat: no-repeat;
+        }
+
+        .LWmobileMenuList {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                color: $LWyellow;
+                font-weight: bold;
+                font-size: 24px;
+                @include transition($t1);
+
+                .LWmobileMenuItem {
+                    padding: 20px;
+                    border-bottom: 2px solid $LWyellow;
+                }
+
+                &:last-child {
+                    .LWmobileMenuItem {
+                        border-bottom: none;
+                    }
+                }
+
+                &:hover {
+                    background-color: $LWyellow;
+                    color: $LWmidGreen;
+                }
+            }
+        }
+
+        .LWmenuContactInfo {
+            margin: 8vw 60px 20px 5vw;
+            font-size:24px;
+
+            .LWmenuOpeningHours, .LWmenuEmail, .LWmenuPhoneNumber {
+                margin-bottom: 20px;
+                a {
+                    color:inherit;
+
+                }
+            }
+
+            .LWsocialIcons {
+                .LWsocialIcon {
+                    width:40px;
+                    margin:0 20px 20px 0;
+                    display:inline-block;
+                    svg{
+                        path{
+                            fill:$LWyellow;
+                            @include transition($t1);
+                        }
+                    }
+                    &:hover{
+                        svg{
+                            path{
+                                fill:$LWlightYellow;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

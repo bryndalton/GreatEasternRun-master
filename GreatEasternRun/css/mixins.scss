@@ -1,0 +1,251 @@
+﻿$purple: #6E2A8D;
+$lighterPurple: #7b1185;
+$darkPurple: #6c1375;
+$pink: #DF0E8D;
+
+$darkGrey: #282828;
+$midGrey: #606569;
+$veryLightGrey: #F5F5F5;
+
+$textDark: #666666;
+$green: #016A32;
+$lightGreen: #90BE20;
+$orange: #E23424;
+$yellow: #F9C91A;
+$darkRed: #820924;
+$red: #DD0236;
+
+$premium: #B4B4B4;
+$gold: #BF9B30;
+$silver: #CECECE;
+$bronze: #AD8A56;
+
+$darkBlue: #363B8A;
+$blue: #00A8E7;
+$otherBlue: #1B1464;
+
+$tableGreyDark: #EEEEEE;
+$tableGreyLight: #F5F5F5;
+
+$advertGreen: #62BA16;
+
+$rating1:#39B54A;
+$rating2: #91CA60;
+$rating3: #FBB040;
+$rating4: #F15A29;
+$rating5: #E01F25;
+
+$t1: all 0.6s;
+$t2: transform 0.6s;
+
+//Lost World
+$LWyellow: #FCEC45;
+$LWlightYellow: #fef3a1;
+$LWdarkBlue: #0b1c28;
+$LWmidGreen: #003B3C;
+$LWred:#E52D3B;
+$LWblue: #00A5BC;
+$LWdarkBlue2: #2B3C8E;
+$LWorange: #F29121;
+//Lost World
+
+
+@font-face {
+    font-family: 'StagSans';
+    src: url("../Fonts/stag_sans/StagSans-Medium.otf") format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stag-Semibold';
+    src: url("../Fonts/stag_sans/Stag-Semibold.otf") format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'StagSans-Semibold';
+    src: url("../Fonts/stag_sans/StagSans-Semibold.otf") format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'StagSans-Medium';
+    src: url("../Fonts/stag_sans/StagSans-Medium.otf") format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'StagSans-Book';
+    src: url("../Fonts/stag_sans/StagSans-Book.otf") format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'StagSans-Light';
+    src: url("../Fonts/stag_sans/StagSans-Light.otf") format('truetype');
+    font-display: swap;
+}
+
+
+
+@mixin transition-delay($transition) {
+    -webkit-transition-delay: $transition;
+    //-ms-transition-delay: $transition;
+    -moz-transition-delay: $transition;
+    -o-transition-delay: $transition;
+    transition-delay: $transition;
+}
+
+@mixin transform($transform) {
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    -webkit-transform: $transform;
+    transform: $transform;
+}
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    //-ms-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin filter($fliter) {
+    -webkit-filter: $fliter;
+    -ms-filter: $fliter;
+    -moz-filter: $fliter;
+    //-o-filter: $fliter;
+    filter: $fliter;
+}
+
+@mixin column-gap($gap) {
+    -webkit-column-gap: $gap;
+    -ms-column-gap: $gap;
+    -moz-column-gap: $gap;
+    column-gap: $gap;
+}
+
+@mixin appearance($appearance) {
+    -webkit-appearance: $appearance;
+    -moz-appearance: $appearance;
+    //-o-appearance: $appearance;
+    //appearance: $appearance;
+}
+
+@mixin animation($animation) {
+    -webkit-animation: $animation;
+    //-ms-animation: $animation;
+    -moz-animation: $animation;
+    -o-animation: $animation;
+    animation: $animation;
+}
+
+@mixin pinkToPurple() {
+    background: rgb(223,14,141);
+    background: -moz-linear-gradient(left, rgba($pink,1) 0%, rgba($purple,1) 100%);
+    background: -webkit-linear-gradient(left, rgba($pink,1) 0%,rgba($purple,1) 100%);
+    background: linear-gradient(to right, rgba($pink,1) 0%,rgba($purple,1) 100%);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$pink, endColorstr=$purple,GradientType=1 );
+}
+
+@mixin purpleToPink() {
+    background: rgb(223,14,141);
+    background: -moz-linear-gradient(left, rgba($purple,1) 0%, rgba($pink,1) 100%);
+    background: -webkit-linear-gradient(left, rgba($purple,1) 0%,rgba($pink,1) 100%);
+    background: linear-gradient(to right, rgba($purple,1) 0%,rgba($pink,1) 100%);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$purple, endColorstr=$pink,GradientType=1 );
+}
+
+@mixin purpleToPinkDiag() {
+    background: rgb(223,14,141);
+    background: -moz-linear-gradient(45deg, rgba($purple,1) 0%, rgba($pink,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba($purple,1) 0%,rgba($pink,1) 100%);
+    background: linear-gradient(45deg, rgba($purple,1) 0%,rgba($pink,1) 100%);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$purple, endColorstr=$pink,GradientType=1 );
+}
+
+@mixin fillPurpleToPinkDiag() {
+    fill: rgb(223,14,141);
+    fill: -moz-linear-gradient(45deg, rgba($purple,1) 0%, rgba($pink,1) 100%);
+    fill: -webkit-linear-gradient(45deg, rgba($purple,1) 0%,rgba($pink,1) 100%);
+    fill: linear-gradient(45deg, rgba($purple,1) 0%,rgba($pink,1) 100%);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$purple, endColorstr=$pink,GradientType=1 );
+}
+
+
+@mixin greenToLightGreen() {
+    background: rgb(1,106,50);
+    background: -moz-linear-gradient(left, rgba($green,1) 0%, rgba($lightGreen,1) 100%);
+    background: -webkit-linear-gradient(left, rgba($green,1) 0%,rgba($lightGreen,1) 100%);
+    background: linear-gradient(to right, rgba($green,1) 0%,rgba($lightGreen,1) 100%);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$green, endColorstr=$lightGreen,GradientType=1 );
+}
+
+@mixin greenToLightGreenDiag() {
+    background: rgb(1,106,50);
+    background: -moz-linear-gradient(45deg, rgba($green,1) 0%, rgba($lightGreen,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba($green,1) 0%,rgba($lightGreen,1) 100%);
+    background: linear-gradient(45deg, rgba($green,1) 0%,rgba($lightGreen,1) 100%);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$green, endColorstr=$lightGreen,GradientType=1 );
+}
+
+@mixin purpleToPurpleVert() {
+    background: rgb(30,87,153);
+    background: -moz-linear-gradient(top, rgba($purple,1) 0%, rgba($lighterPurple,1) 100%);
+    background: -webkit-linear-gradient(top, rgba($purple,1) 0%,rgba($lighterPurple,1) 100%);
+    background: linear-gradient(to bottom, rgba($purple,1) 0%,rgba($lighterPurple,1) 100%);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$purple, endColorstr=$lighterPurple,GradientType=0 );
+}
+
+@mixin orangeToYellow() {
+    background: rgb(226,52,36);
+    background: -moz-linear-gradient(left, rgba($orange,1) 0%, rgba($yellow,1) 100%);
+    background: -webkit-linear-gradient(left, rgba($orange,1) 0%,rgba($yellow,1) 100%);
+    background: linear-gradient(to right, rgba($orange,1) 0%,rgba($yellow,1) 100%);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$orange, endColorstr=$yellow,GradientType=1 );
+}
+
+@mixin orangeToYellowDiag() {
+    background: rgb(226,52,36);
+    background: -moz-linear-gradient(45deg, rgba($orange,1) 0%, rgba($yellow,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba($orange,1) 0%,rgba($yellow,1) 100%);
+    background: linear-gradient(45deg, rgba($orange,1) 0%,rgba($yellow,1) 100%);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$orange, endColorstr=$yellow,GradientType=1 );
+}
+
+@mixin darkRedToRed() {
+    background: rgb(130,9,36);
+    background: -moz-linear-gradient(left, rgba($darkRed,1) 0%, rgba($red,1) 100%);
+    background: -webkit-linear-gradient(left, rgba($darkRed,1) 0%,rgba($red,1) 100%);
+    background: linear-gradient(to right, rgba($darkRed,1) 0%,rgba($red,1) 100%);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$darkRed, endColorstr=$red,GradientType=1 ); 
+}
+
+@mixin darkRedToRedDiag() {
+    background: rgb(130,9,36);
+    background: -moz-linear-gradient(45deg, rgba($darkRed,1) 0%, rgba($red,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba($darkRed,1) 0%, rgba($red, 1) 100%);
+    background: linear-gradient(45deg, rgba($darkRed,1) 0%, rgba($red, 1) 100%);
+}
+
+@mixin darkBlueToBlue() {
+    background: rgb(54,59,138);
+    background: -moz-linear-gradient(left, rgba($darkBlue,1) 0%, rgba($blue,1) 100%);
+    background: -webkit-linear-gradient(left, rgba($darkBlue,1) 0%,rgba($blue,1) 100%);
+    background: linear-gradient(to right, rgba($darkBlue,1) 0%,rgba($blue,1) 100%);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$darkBlue, endColorstr=$blue,GradientType=1 );
+}
+
+@mixin darkBlueToBlueDiag() {
+    background: rgb(54,59,138);
+    background: -moz-linear-gradient(45deg, rgba($darkBlue,1) 0%, rgba($blue,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba($darkBlue,1) 0%,rgba($blue,1) 100%);
+    background: linear-gradient(45deg, rgba($darkBlue,1) 0%,rgba($blue,1) 100%);
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$darkBlue, endColorstr=$blue,GradientType=1 );
+}
+
+
+
+

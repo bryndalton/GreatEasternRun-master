@@ -1,0 +1,196 @@
+﻿section.FAQLandingPage {
+    padding: 0 40px 40px 40px;
+    margin: 0px 0 0 0;
+    display: flow-root;
+
+    .searchImage {
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width:100%;
+        max-width:1920px;
+        margin:0 auto;
+    }
+
+    .FAQsearchWrapper {
+        margin: 0 auto 40px 340px;
+
+        input {
+            &[type="text"] {
+                width: calc(100% - 40px);
+                max-width: 300px;
+                padding: 20px 20px 20px 40px;
+                border: 0px solid transparent;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                background-color: 
+                    $tableGreyLight;
+                font-size: inherit;
+                color: $textDark;
+                float: left;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .FAQsearchButton {
+            background-color: $veryLightGrey;
+            width: 58px;
+            height: 58px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            //border: 2px solid $purple;
+            @include transition($t1);
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+
+            &:focus, &:hover {
+                outline: none;
+                background-color: $purple;
+
+                &:after {
+                    background-image: url(../Images/magnifyingglasswhite.svg);
+                }
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-image: url(../Images/magnifyingglass.svg);
+                background-size: 60% auto;
+                background-position: center center;
+                background-repeat: no-repeat;
+                //@include transition($t1);
+            }
+        }
+    }
+
+    .FAQLandingPageInner {
+        display: flex;
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+
+        .FAQLandingPageLeft {
+            width: 220px;
+            min-width: 220px;
+            max-width: 220px;
+            background-color: $veryLightGrey;
+            padding: 40px 40px 40px 40px;
+            position: relative;
+
+            .FAQLandingPageScroll {
+                position: absolute;
+
+                .listItem {
+                    margin-bottom: 20px;
+                    color: $purple;
+                    cursor: pointer;
+                    display: none;
+
+                    &.notFiltered {
+                        display: block;
+                    }
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .FAQLandingPageRight {
+            width: 100%;
+            margin: 0 0 0 40px;
+
+            .faqCategory {
+                display: none;
+                margin-bottom:40px;
+
+                &.notFiltered {
+                    display: block;
+                }
+
+                h4 {
+                    text-align: left;
+                    margin: 0 0 20px 0;
+                }
+
+                .faqObject {
+                    background-color: $purple;
+                    padding: 20px;
+                    margin: 0 0 10px 0;
+                    display: none;
+
+                    &.notFiltered {
+                        display: block;
+                    }
+
+                    .faqObjectQuestion {
+                        color: #FFFFFF;
+                        padding: 0 0 0 50px;
+                        position: relative;
+                        cursor: pointer;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background-color: #FFFFFF;
+                            background-image: url(../Images/pluspurple.svg);
+                            background-size: 60% 60%;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            @include transition($t1);
+                        }
+
+                        &.open {
+                            &:before {
+                                @include transform(translateY(-50%) rotate(45deg));
+                            }
+                        }
+                    }
+
+                    .faqObjectAnswer {
+                        display: none;
+                        h1, h2, h3, h4 {
+                            color:#FFFFFF;
+                        }
+                        strong {
+                            color:#FFFFFF;
+                        }
+                        p {
+                            color: #FFFFFF;
+                            text-align: left;
+                            font-family: 'StagSans-Light';
+                            margin: 20px 0 20px 50px;
+                        }
+                        a{
+                            color:#FFFFFF;
+                            text-decoration:underline;
+                        }
+                        ul, ol {
+                            color:#FFFFFF;
+                        }
+                        table {
+                            color:#FFFFFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

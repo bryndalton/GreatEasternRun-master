@@ -1,0 +1,151 @@
+﻿section.contactList {
+    overflow:hidden;
+    &.background {
+        background-color: $veryLightGrey;
+        padding: 25px 40px;
+
+        h4 {
+            margin: 0 0 25px 0;
+            font-size: 34px;
+        }
+    }
+
+    .contactListTabsWrapper {
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto 20px auto;
+        text-align: center;
+        position: relative;
+        display: flex;
+
+        .contactListTab {
+            width: 100%;
+            padding: 20px;
+            border: 1px solid $purple;
+            text-align: center;
+            color: $purple;
+            font-family: 'StagSans-Book';
+            @include transition($t1);
+            cursor: pointer;
+
+            & + .contactListTab {
+                margin-left: 10px;
+            }
+
+            &:hover {
+                background-color: $purple;
+                color: #FFFFFF;
+            }
+
+            &.selected {
+                background-color: $purple;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .contactListItemsWrapper {
+        text-align: center;
+        display: none;
+
+        .contactListSlider {
+            display: flex;
+        }
+
+        .contactListItem {
+            display: inline-block;
+            padding: 20px;
+            background-color: #FFFFFF;
+            width: 260px;
+            margin: 0 2px 4px 2px;
+            display: flex;
+            flex-direction: column;
+
+            .contactTitle {
+                color: $purple;
+                font-family: 'StagSans-Medium';
+                margin-bottom: 20px;
+                font-size: 20px;
+                padding: 0 20px;
+            }
+
+            .contactAddress {
+                font-family: 'StagSans-Book';
+                color: $textDark;
+                margin-bottom: 20px;
+            }
+
+            .contactPhone {
+                font-family: 'StagSans-Book';
+                color: $textDark;
+            }
+
+            .contactManager {
+                font-family: 'StagSans-Book';
+                color: $textDark;
+                margin-bottom: 20px;
+            }
+
+            .openingTimes {
+                margin-top: auto;
+
+                .openingTimesTitle {
+                    color: $purple;
+                    font-family: 'StagSans-Book';
+                    margin-bottom: 20px;
+                }
+
+                .openingTime {
+                    display: flex;
+
+                    .left, .right {
+                        font-family: 'StagSans-Book';
+                        color: $textDark;
+                    }
+
+                    .left {
+                        text-align: left;
+                        white-space: nowrap;
+                    }
+
+                    .right {
+                        width: 100%;
+                        text-align: right;
+                    }
+                }
+            }
+
+            .contactButtons {
+                padding: 20px 0;
+
+                .emailUs, .moreInfo {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    border: 1px solid $purple;
+                    border-radius: 30px;
+                    color: $purple;
+                    @include transition($t1);
+
+                    &:hover {
+                        background-color: $purple;
+                        color: #FFFFFF;
+                    }
+                }
+
+                .emailUs {
+                    margin: 0 10px 0 0;
+                }
+
+                .moreInfo {
+                    margin: 0 0 0 10px;
+                }
+            }
+        }
+
+        &.selected {
+            display: flex;
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+}

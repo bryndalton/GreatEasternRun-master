@@ -1,0 +1,202 @@
+﻿footer {
+	display: block;
+
+	.footerSignUp {
+		background-color: #FFFFFF;
+		text-align: center;
+		padding: 17px 40px;
+
+		.footerSignUpTitle {
+			color: $purple;
+			font-family: 'StagSans-Light';
+			font-size: 32px;
+			margin-bottom: 3px;
+		}
+
+		.footerSignUpDesc {
+			color: $textDark;
+			font-size: 16px;
+			font-family: 'StagSans-Book';
+		}
+
+		.footerSignUpButton {
+			padding: 16px 20px;
+			background-color: $purple;
+			color: #FFFFFF;
+			display: inline-block;
+			margin: 13px 0px 0 0px;
+			border-radius: 30px;
+			border: 2px solid $purple;
+			@include transition($t1);
+			cursor: pointer;
+			font-size: 16px;
+			line-height: 21px;
+
+			&:hover {
+				background-color: #FFFFFF;
+				color: $purple;
+			}
+		}
+	}
+
+	.footerMain {
+		padding: 28px 40px 30px 28px;
+		background-color: $darkGrey;
+		max-width: 1612px;
+		margin: 0 auto;
+
+
+		.footerMainTop {
+			display: flex;
+			width: 100%;
+			//max-width: 1920px;
+			margin: 0 auto;
+			//padding-bottom: 20px;
+			.footerLogo {
+				display: block;
+				min-height: 30px;
+				width: 100%;
+				max-width: 200px;
+				background-size: contain;
+				background-position: left center;
+				background-repeat: no-repeat;
+				background-image: url(../Images/vivacity-logo-white.svg);
+			}
+
+			.footerMainTopIcons {
+				text-align: right;
+				padding-top: 5px;
+				width: 100%;
+
+				.footerIcon {
+					width: 80px;
+					height: 80px;
+					border: 1px solid #FFFFFF;
+					display: inline-block;
+					margin: 0 0 0 20px;
+				}
+			}
+		}
+
+
+		.footerCenter {
+			display: block;
+			width: 100%;
+			max-width: 350px;
+			color: #FFFFFF;
+			font-family: 'StagSans-Book';
+			font-size: 16px;
+			line-height: 21px;
+
+			.registeredCharity {
+				color: $pink;
+				margin-bottom: 10px;
+			}
+		}
+
+		.footerSocialIcons {
+			.footerSocialIcon {
+				width: 24px;
+				height: 24px;
+				border-radius: 3px;
+				background-color: #777777;
+				margin: 0 10px 0px 0;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+				@include transition($t1);
+				cursor: pointer;
+
+				&.facebook {
+					svg {
+						margin-top: 4px;
+
+						path {
+							fill: $darkGrey;
+						}
+					}
+				}
+
+				&.twitter {
+					svg {
+						width: 80%;
+						margin-top: 4px;
+
+						path {
+							fill: $darkGrey;
+						}
+					}
+				}
+
+				&:hover {
+					background-color: #FFFFFF;
+				}
+			}
+		}
+	}
+
+	.footerBottom {
+		padding: 20px;
+		background-color: #FFFFFF;
+		color: $textDark;
+		padding: 40px 40px 60px 40px;
+		max-width: 1680px;
+		margin: 0 auto;
+
+		.footerIcons {
+			.footerIcon {
+				float: left;
+				width: 80px;
+				height: 80px;
+				background-size: contain;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0 20px 20px 0;
+			}
+		}
+
+		.footerLink {
+			display: flex;
+			width: 100%;
+			font-family: 'StagSans-Book';
+			color: $midGrey;
+
+			.footerBottomLeft {
+				width: 100%;
+
+				ul {
+					padding: 0;
+					margin: 0;
+					list-style-type: none;
+
+					li {
+						display: inline-block;
+						margin: 0 20px 0 0;
+						cursor: pointer;
+
+						&:last-child {
+							border-right: none;
+						}
+
+						a {
+							color: $purple;
+
+							&:visited {
+								color: $purple;
+							}
+						}
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+
+			.footerBottomRight {
+				width: 100%;
+				text-align: right;
+			}
+		}
+	}
+}

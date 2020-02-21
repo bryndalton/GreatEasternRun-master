@@ -1,0 +1,275 @@
+﻿section.contactHeader {
+    padding: 0 40px;
+
+    .contactHeaderInner {
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
+section.contactForm {
+    padding: 40px;
+
+    .contactFormInner {
+        width: calc(100% - 120px);
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 0 60px;
+
+        h4 {
+            margin-top: 0;
+        }
+
+        form {
+            .formRow {
+                margin-bottom: 10px;
+                clear: both;
+                overflow: auto;
+
+                label {
+                    color: $textDark;
+                    font-family: 'StagSans-Book';
+                    display: block;
+                    margin-bottom: 10px;
+                }
+
+                input {
+                    padding: 20px;
+                    border: 0px solid transparent;
+                    background-color: $tableGreyLight;
+                    width: calc(100% - 40px);
+
+                    &[type="radio"] {
+                        display: inline-block;
+                        width: auto;
+                        margin-right: 20px;
+                        width: 30px;
+                        height: 30px;
+                        float: left;
+                    }
+                }
+
+                .radioItem {
+                    display: inline-block;
+                    margin: 0 40px 0 0;
+                    display: flex;
+                    align-items: center;
+                    float: left;
+
+                    .radioText {
+                        color: $textDark;
+                        font-family: 'StagSans-Book';
+                        display: inline-block;
+                        width: auto;
+                        margin-bottom: 0;
+                    }
+                }
+
+                &.twoCol {
+                    width: 50%;
+                    float: left;
+                    clear: right;
+
+                    &:nth-child(even) {
+                        margin-right: 5px;
+                        width: calc(50% - 5px);
+                    }
+                }
+
+                &.rateOurService {
+                    label {
+                        color: $purple;
+                    }
+
+                    .ratingsInner {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .ratings {
+                            input[type="radio"] {
+                                float: none;
+                                width: 60px;
+                                height: 60px;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                border-radius: 50%;
+                                padding: 0;
+                                background-size: contain;
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                                background-color: #FFFFFF;
+                                @include transition($t1);
+                                cursor: pointer;
+
+                                &:focus {
+                                    outline: none;
+                                }
+
+                                &[value="rating1"] {
+                                    border: 5px solid $rating1;
+                                    background-image: url(../Images/rating1.svg);
+
+                                    &:hover {
+                                        background-color: $rating1;
+                                        background-image: url(../Images/rating1white.svg);
+                                    }
+
+                                    &:checked {
+                                        background-color: $rating1;
+                                        background-image: url(../Images/rating1white.svg);
+                                    }
+                                }
+
+                                &[value="rating2"] {
+                                    border: 5px solid $rating2;
+                                    background-image: url(../Images/rating2.svg);
+
+                                    &:hover {
+                                        background-color: $rating2;
+                                        background-image: url(../Images/rating2white.svg);
+                                    }
+
+                                    &:checked {
+                                        background-color: $rating2;
+                                        background-image: url(../Images/rating2white.svg);
+                                    }
+                                }
+
+                                &[value="rating3"] {
+                                    border: 5px solid $rating3;
+                                    background-image: url(../Images/rating3.svg);
+
+                                    &:hover {
+                                        background-color: $rating3;
+                                        background-image: url(../Images/rating3white.svg);
+                                    }
+
+                                    &:checked {
+                                        background-color: $rating3;
+                                        background-image: url(../Images/rating3white.svg);
+                                    }
+                                }
+
+                                &[value="rating4"] {
+                                    border: 5px solid $rating4;
+                                    background-image: url(../Images/rating4.svg);
+
+                                    &:hover {
+                                        background-color: $rating4;
+                                        background-image: url(../Images/rating4white.svg);
+                                    }
+
+                                    &:checked {
+                                        background-color: $rating4;
+                                        background-image: url(../Images/rating4white.svg);
+                                    }
+                                }
+
+                                &[value="rating5"] {
+                                    border: 5px solid $rating5;
+                                    background-image: url(../Images/rating5.svg);
+
+                                    &:hover {
+                                        background-color: $rating5;
+                                        background-image: url(../Images/rating5white.svg);
+                                    }
+
+                                    &:checked {
+                                        background-color: $rating5;
+                                        background-image: url(../Images/rating5white.svg);
+                                    }
+                                }
+                            }
+                        }
+
+                        .selectService {
+                            text-align: right;
+                            position: relative;
+                            background-color: $tableGreyLight;
+                            border-radius: 30px;
+                            height: 100%;
+                            max-width: 300px;
+                            width: 100%;
+
+							&.left{
+								margin-right: 5em;
+							}
+
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 40px;
+                                height: 100%;
+                                background-color: $purple;
+                                border-radius: 30px 0 0 30px;
+                                pointer-events: none;
+                                background-image: url(/images/downchevronwhite.svg);
+                                background-size: 15px 15px;
+                                background-repeat: no-repeat;
+                                background-position: right 11px center;
+                            }
+
+                            select {
+                                padding: 0.75rem 10px 0.75rem 50px;
+                                border: none;
+                                width: 100%;
+                                color: $purple;
+                                font-size: 18px;
+                                font-family: 'StagSans-Light';
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                text-align: center;
+                                overflow: visible;
+                                background-color: transparent;
+
+                                &:focus {
+                                    outline: none;
+                                }
+
+                                option {
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.submit {
+                    text-align: center;
+
+                    .submitButton {
+                        padding: 20px 40px;
+                        margin: 40px auto 0 auto;
+                        border: 2px solid $purple;
+                        color: $purple;
+                        display: inline-block;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        border-radius: 40px;
+                        background-color: #FFFFFF;
+                        font-size: 20px;
+                        cursor: pointer;
+                        @include transition($t1);
+                        font-family: 'StagSans-Semibold';
+
+                        &:hover {
+                            color: #FFFFFF;
+                            background-color: $purple;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

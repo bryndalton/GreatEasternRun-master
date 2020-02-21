@@ -1,0 +1,701 @@
+﻿.searchResultFeatured {
+	padding: 0 40px 40px 40px;
+
+	.searchResultsFeaturedInner {
+		display: flex;
+		width: 100%;
+		max-width: 1920px;
+		margin: 0 auto;
+
+		.searchResultsFeaturedInnerLeft, .searchResultsFeaturedInnerRight {
+			width: 50%;
+			position: relative;
+			max-width: 790px;
+		}
+
+		.searchResultsFeaturedInnerLeft {
+			margin-right: 20px;
+		}
+
+		.eventImageWrapper {
+			width: 100%;
+			position: relative;
+            margin:0 0 50px 0;
+
+			.bx-wrapper {
+				.bx-controls {
+					//position: absolute;
+					//bottom: 0;
+					width: 100%;
+
+					.bx-pager {
+						text-align: center;
+
+						.bx-pager-item {
+							color: rgba($purple,0.0);
+							width: 10px;
+							height: 10px;
+							border-radius: 50%;
+							//background-color:$purple;
+							display: inline-block;
+							margin: 20px 5px;
+							overflow: hidden;
+							position: relative;
+
+							a.bx-pager-link {
+								color: transparent;
+								background-color: rgba($purple,0.5);
+								width: 100%;
+								height: 100%;
+								position: absolute;
+								left: 0;
+								top: 0;
+								@include transition($t1);
+
+								&.active {
+									background-color: $purple;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.bx-wrapper {
+				height: 100%;
+			}
+
+			.bx-viewport {
+				height: 100%;
+			}
+
+			#featuredImageSlider {
+				//height: 450px;
+				height: 100%;
+			}
+
+			.featuredImage {
+				width: 100%;
+				margin: 0 0px 0 0;
+				height: 100%;
+				background-size: cover;
+				background-position: center center;
+			}
+
+			.sliderControls {
+				position: absolute;
+				top: 50%;
+				@include transform(translateY(-50%));
+				width: 100%;
+
+				&.hidden {
+					display: none;
+				}
+
+				#featuredImageSliderPrev, #featuredImageSliderNext {
+					position: absolute;
+					width: 20px;
+					height: 20px;
+					border: 1px solid $midGrey;
+					border-radius: 50%;
+					@include transition($t1);
+					cursor: pointer;
+
+					&:hover {
+						background-color: #FFFFFF;
+					}
+
+					svg {
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						@include transform(translateX(-50%) translateY(-50%));
+					}
+
+					a {
+						width: 100%;
+						height: 100%;
+						display: block;
+						position: relative;
+					}
+				}
+
+				#featuredImageSliderPrev {
+					left: 20px;
+				}
+
+				#featuredImageSliderNext {
+					right: 20px;
+				}
+			}
+		}
+
+		.overview {
+			width: 100%;
+			margin: 0 20px 0 0;
+
+			.image {
+				background-color: $veryLightGrey;
+				height: 100%;
+				background-size: cover;
+				background-position: center center;
+			}
+
+			.eventOverview {
+				margin-top: 2rem;
+				padding-bottom: 2rem;
+				border-bottom: 1px solid $midGrey;
+				min-height: 150px;
+
+				p.title {
+					border-bottom: 1px solid $midGrey;
+					padding-bottom: 14px;
+				}
+
+				p {
+					color: $midGrey;
+					margin-bottom: 0;
+					text-align: left;
+					margin: 0 0 0 0;
+
+					& + p {
+						margin-top: 1rem;
+						font-family: 'StagSans-Book';
+						font-size: 16px;
+						line-height: 21px;
+					}
+				}
+			}
+		}
+
+		.featuredInfo {
+			width: calc(100% - 20px);
+			text-align: left;
+			padding-top: 27px;
+			position: absolute;
+
+			h4 {
+				margin: 0 0 20px 0;
+				text-align: left;
+				font-size: 32px;
+				font-family: 'StagSans-Book'
+			}
+
+			h5 {
+				color: $textDark;
+				margin: 0;
+				font-family: 'StagSans-Medium';
+			}
+
+			p {
+				color: $textDark;
+				margin: 0 0 20px 0;
+				font-family: 'StagSans-Book';
+				font-size: 20px;
+				text-align: left;
+
+				&.additionalPrices {
+					font-size: 12px;
+				}
+			}
+
+			h5 {
+				color: $purple;
+				margin-bottom: 1rem;
+				font-size: 20px;
+			}
+
+			.openingHours {
+				text-align: left;
+
+				h4 {
+					color: $textDark;
+					font-size: 18px;
+					margin: 0 0 0.5rem 0;
+					text-align: left;
+				}
+
+				ul {
+					list-style-type: none;
+					margin: 0 0 20px 0;
+					padding: 0;
+
+					li {
+						font-family: 'StagSans-Book';
+						color: $textDark;
+						font-size: 16px;
+						line-height: 21px;
+
+						.day {
+							display: inline-block;
+							margin-right: 40px;
+							width: 50px;
+						}
+					}
+				}
+			}
+
+			.dateTime {
+				display: flex;
+				margin-bottom: 10px;
+
+				.dateTimeIcon {
+					width: 30px;
+					height: 30px;
+					background-image: url(../Images/date.svg);
+					background-size: contain;
+					background-position: center center;
+					background-repeat: no-repeat;
+					margin: 0 10px 0 0;
+				}
+
+				.dateTimeInfo {
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					justify-content: center;
+					width: 100%;
+					text-align: left;
+					color: $textDark;
+					font-size: 16px;
+					line-height: 21px;
+
+					p {
+						margin: 0;
+						font-family: 'StagSans-Book';
+					}
+				}
+			}
+
+			.location {
+				display: flex;
+				margin-bottom: 10px;
+
+				.locationIcon {
+					width: 30px;
+					height: 30px;
+					background-image: url(../Images/location.svg);
+					background-size: contain;
+					background-position: center center;
+					background-repeat: no-repeat;
+					margin: 0 10px 0 0;
+				}
+
+				.locationInfo {
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					justify-content: center;
+					width: 100%;
+					text-align: left;
+					color: $textDark;
+					font-size: 16px;
+					line-height: 21px;
+
+					a {
+						color: $purple;
+					}
+
+					p {
+						margin: 0;
+						font-family: 'StagSans-Book';
+					}
+				}
+			}
+
+			.contactEmail {
+				display: flex;
+				margin-bottom: 10px;
+
+				.contactEmailIcon {
+					width: 30px;
+					height: 30px;
+					background-image: url(../Images/envelope.svg);
+					background-size: contain;
+					background-position: center center;
+					background-repeat: no-repeat;
+					margin: 0 10px 0 0;
+				}
+
+				.contactEmailInfo {
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					justify-content: center;
+					width: 100%;
+					text-align: left;
+					color: $textDark;
+					font-size: 16px;
+					line-height: 21px;
+
+					a {
+						color: $purple;
+					}
+
+					p {
+						margin: 0;
+						font-family: 'StagSans-Book';
+					}
+				}
+			}
+
+			.contactNumber {
+				display: flex;
+				margin-bottom: 10px;
+
+				.contactNumberIcon {
+					width: 30px;
+					height: 30px;
+					background-image: url(../Images/phone.svg);
+					background-size: contain;
+					background-position: center center;
+					background-repeat: no-repeat;
+					margin: 0 10px 0 0;
+				}
+
+				.contactNumberInfo {
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					justify-content: center;
+					width: 100%;
+					text-align: left;
+					color: $textDark;
+					font-size: 16px;
+					line-height: 21px;
+
+					a {
+						color: $purple;
+					}
+
+					p {
+						margin: 0;
+						font-family: 'StagSans-Book';
+					}
+				}
+			}
+
+			.bookNowButton {
+				padding: 10px;
+				border-radius: 30px;
+				color: $purple;
+				border: 1px solid $purple;
+				display: block;
+				margin: 10px auto 0 0;
+				max-width: 130px;
+				text-align: center;
+				@include transition($t1);
+				cursor: pointer;
+				font-weight: bolder;
+
+				&:hover {
+					background-color: $purple;
+					color: #FFFFFF;
+				}
+
+				&.mobile {
+					display: none;
+				}
+			}
+
+			&.isMobile {
+				display: none;
+			}
+
+			&.nonMobile {
+				display: block;
+			}
+		}
+	}
+}
+
+.search .searchResultFeatured .searchResultsFeaturedInner {
+	.featuredInfo {
+		display: flex;
+		flex-direction: column;
+
+		.bookNowButton {
+			margin-top: auto;
+			padding: 10px;
+		}
+	}
+}
+
+.searchResults, .mayAlsoLike {
+    display: block;
+    padding: 0 40px;
+
+    .searchResultsInner {
+        width: 100%;
+        //max-width: 1920px;
+        margin: 0 auto;
+        //overflow: auto;
+        display: flex;
+
+        .searchResultItem {
+            width: calc(25% - 4px);
+            background-color: $veryLightGrey;
+            position: relative;
+            display: inline-block;
+            float: left;
+            display: flex;
+            flex-direction: column;
+
+            .eventImageWrapper {
+                width: 100%;
+                height: 200px;
+                position: relative;
+                overflow: hidden;
+
+                .eventImage {
+                    width: 100%;
+                    height: 100%;
+                    background-size: cover;
+                    background-position: center center;
+
+                    @include transition($t1);
+                }
+                /*&:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 30px;
+                    height: 30px;
+                    clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+                }*/
+            }
+
+            .eventInfo {
+                //padding: 10px 20px 20px 20px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                vertical-align: top;
+
+                .eventTitle {
+                    text-align: center;
+                    color: $textDark;
+                    font-weight: 900;
+                    margin: 10px 20px 20px 20px;
+                    font-size: 24px;
+                    font-family: 'StagSans-Medium';
+                }
+
+                p {
+                    color: $textDark;
+                    margin: 10px 20px 20px 20px;
+                    height:100%;
+
+                    & + p {
+                        margin-top: 0;
+                    }
+                }
+
+                .eventWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    //margin-top: auto;
+                    margin-bottom: 1rem;
+                    flex-grow: 1;
+                }
+
+                .eventLocation, .eventTime, .eventPrice {
+                    text-align: left;
+                    margin: 10px 40px 10px 80px;
+                    position: relative;
+                    color: $textDark;
+                    font-family: 'StagSans-Book';
+                    align-items: center;
+                    height: 100%;
+                    display: flex;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        background-size: contain;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        left: -30px;
+                        top: 50%;
+                        @include transform(translateX(-50%) translateY(-50%));
+                    }
+                }
+
+                .eventLocation:before {
+                    background-image: url(../Images/location.svg);
+                }
+
+                .eventTime:before {
+                    background-image: url(../Images/date.svg);
+                }
+
+                .eventPrice:before {
+                    background-image: url(../Images/price.svg);
+                }
+
+                .bookNowButton {
+                    display: inline-block;
+                    margin: 20px auto;
+                    cursor: pointer;
+                    position: relative;
+                    //clear: both;
+                    width: fit-content;
+
+                    .bookNowButtonInner {
+                        padding: 10px 20px;
+                        display: inline-block;
+                        border: 1px solid $purple;
+                        border-radius: 30px;
+                        color: $purple;
+                        font-weight: 700;
+                        @include transition($t1);
+
+                        &:hover {
+                            background-color: $purple;
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+
+            &.thingsToDo {
+                .eventImageWrapper {
+                    border-bottom: 3px solid $purple;
+
+                    &:after {
+                        //@include purpleToPinkDiag;
+                    }
+                }
+            }
+
+            &.gymHealth {
+                .eventImageWrapper {
+                    border-bottom: 3px solid $green;
+
+                    &:after {
+                        //@include greenToLightGreenDiag;
+                    }
+                }
+            }
+
+            &.theatreShows {
+                .eventImageWrapper {
+                    border-bottom: 3px solid $orange;
+
+                    &:after {
+                        //@include orangeToYellowDiag;
+                    }
+                }
+            }
+
+            &.librariesArchives {
+                .eventImageWrapper {
+                    border-bottom: 3px solid $darkBlue;
+
+                    &:after {
+                        //@include darkBlueToBlueDiag;
+                    }
+                }
+            }
+
+            &.heritage {
+                .eventImageWrapper {
+                    border-bottom: 3px solid $darkRed;
+
+                    &:after {
+                        //@include darkRedToRedDiag;
+                    }
+                }
+            }
+
+            &.arts {
+                .eventImageWrapper {
+                    border-bottom: 3px solid $orange;
+
+                    &:after {
+                        //@include orangeToYellowDiag;
+                    }
+                }
+            }
+
+            &:hover {
+                .eventImage {
+                    //transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+section.activityFilterSection {
+    #searchResults {
+        min-height: 300px;
+        .resultsTitle {
+            text-align:center;
+            color:$purple;
+        }
+    }
+}
+
+.searchResults {
+
+    .bx-wrapper {
+        .bx-controls {
+            .bx-pager {
+                text-align: center;
+                padding: 0.5rem 0;
+
+                .bx-pager-item {
+                    color: rgba($purple,0.0);
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    //background-color:$purple;
+                    display: inline-block;
+                    margin: 20px 5px;
+                    overflow: hidden;
+                    position: relative;
+
+                    a.bx-pager-link {
+                        color: transparent;
+                        background-color: rgba($purple,0.5);
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        @include transition($t1);
+
+                        &.active {
+                            background-color: $purple;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.searchResultsSpinner {
+	margin: 60px auto;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border-left: 2px solid $purple;
+	border-right: 2px solid $purple;
+	@include animation(spinnerAnim 1s linear infinite)
+}
+
+@keyframes spinnerAnim {
+	from {
+		@include transform(rotate(0));
+	}
+
+	to {
+		@include transform(rotate(360deg))
+	}
+}

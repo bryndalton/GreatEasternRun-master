@@ -1,0 +1,57 @@
+﻿section.priceList {
+	padding: 40px;
+
+	.priceListInner {
+		width: 100%;
+		max-width: 1920px;
+		margin: 0 auto;
+
+		.priceListTable {
+			width: 100%;
+			border-spacing: 0;
+
+			tr {
+				th {
+					background-color: #FFFFFF;
+					color: $textDark;
+					font-family: 'StagSans-Book';
+					text-transform: uppercase;
+					padding: 10px 20px;
+
+					&:first-child {
+						text-align: left;
+					}
+				}
+
+				td {
+					text-align: center;
+					color: $textDark;
+					font-family: 'StagSans-Light';
+					padding: 10px 20px;
+					font-size: 16px;
+					line-height: 21px;
+
+					&:first-child {
+						text-align: left;
+					}
+				}
+
+				&:nth-child(odd) {
+					background-color: $tableGreyLight;
+				}
+
+				&:nth-child(even) {
+					background-color: $tableGreyDark;
+				}
+
+				&:hover {
+					background-color: $midGrey;
+
+					td {
+						color: $veryLightGrey;
+					}
+				}
+			}
+		}
+	}
+}

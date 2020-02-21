@@ -1,0 +1,94 @@
+﻿section.headerImage {
+    display: block;
+    min-height: calc(100vh - 120px);
+    padding: 0px 40px 0 40px;
+
+    .headerImageInner {
+        width: 100%;
+        height: calc(100vh - 120px);
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+
+        .campaignTitles {
+            position: absolute;
+            bottom: 5vw;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index:2;
+
+            .campaignTitle {
+                font-size: 60px;
+                color: #FFFFFF;
+                font-family: 'Stag-Semibold';
+            }
+
+            .campaignSubtitle {
+                font-size: 30px;
+                color: #FFFFFF;
+                font-family: 'Stag-Semibold';
+            }
+        }
+    }
+
+    .headerImageInner {
+        /*&:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+        }*/
+    }
+
+    /*&.thingsToDo {
+
+
+        .headerImageInner:after {
+            @include purpleToPinkDiag;
+        }
+    }
+
+    &.gymHealth {
+
+
+        .headerImageInner:after {
+            @include greenToLightGreenDiag;
+        }
+    }
+
+    &.theatreShows {
+
+
+        &:after {
+            @include orangeToYellowDiag;
+        }
+    }
+
+    &.librariesArchives {
+
+
+        .headerImageInner:after {
+            @include darkBlueToBlueDiag;
+        }
+    }
+
+    &.heritage {
+
+
+        .headerImageInner:after {
+            @include darkRedToRedDiag;
+        }
+    }
+
+    &.arts {
+
+
+        .headerImageInner:after {
+            @include orangeToYellowDiag;
+        }
+    }*/
+}

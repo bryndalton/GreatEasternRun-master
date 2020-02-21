@@ -1,0 +1,10 @@
+﻿.onlineBookingIframeWrapper {
+    max-width: 1920px;
+    padding: 0 40px;
+    margin: 40px auto 40px auto;
+
+    iframe {
+        width: 100%;
+        min-height: 600px;
+    }
+}

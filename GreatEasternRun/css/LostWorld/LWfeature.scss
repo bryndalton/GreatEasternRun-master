@@ -1,0 +1,274 @@
+﻿.LWfeature {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+
+    &.Full {
+        padding: 0;
+
+        .LWfeatureInner {
+            display: block;
+
+            .LWmainImageWrapper {
+                .LWimageSlider, .LWImageHolder {
+                    .LWmainImage {
+                        //margin-bottom: 40px;
+                        border-radius: 0;
+                    }
+                }
+            }
+
+
+
+            .LWfeatureContentWrapper {
+                padding: 0 20px 20px 20px;
+                width: calc(100% - 40px);
+                text-align: center;
+
+                h4.featureTitle {
+                    margin-top: 40px;
+                }
+
+                .LWfeatureContent {
+                    max-width: 1280px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    &.Video {
+        padding: 0;
+
+        .LWfeatureInner {
+            .LWfeatureContentWrapper {
+                padding: 20px 20px 20px 20px;
+                width: calc(100% - 40px);
+            }
+        }
+    }
+
+    .LWbackgroundWatermark {
+        position: absolute;
+        bottom: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        &.Right {
+            left: 0;
+            background-position: left bottom;
+            height: 100%;
+            width: 50%;
+        }
+
+        &.Left {
+            right: 0;
+            background-position: right bottom;
+            height: 100%;
+            width: 50%;
+        }
+    }
+
+    .LWfeatureInner {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+
+        &.Full {
+            display: block;
+
+            .LWmainImage.full {
+                margin-bottom: 40px;
+            }
+        }
+
+        &.Video {
+            display: block;
+        }
+
+        .LWmainImageWrapper {
+            width: 100%;
+            min-width: 40vw;
+            //max-width: 680px;
+            display: flex;
+            flex-direction: column;
+            order: 1;
+
+
+            .LWimageSlider, .LWImageHolder {
+                width: 100%;
+                //min-width: 40vw;
+                //max-width: 680px;
+                .LWmainImage {
+                    height: 40vw;
+                    max-height: 400px;
+                    width: 100%;
+                    background-size: cover;
+                    background-position: center center;
+                    border-radius: 40px;
+                }
+            }
+
+            iframe {
+                display: none;
+            }
+
+            &.placeHolderImage {
+                display: block;
+
+                .LWImageHolder, .LWimageSlider {
+                    .LWmainImage {
+                        border-radius: 0;
+                    }
+                }
+            }
+
+            .bx-wrapper {
+                position: relative;
+
+                .bx-controls {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+
+                    .bx-pager {
+                        text-align: center;
+                        padding: 0.5rem 0;
+
+                        .bx-pager-item {
+                            color: rgba(#FFFFFF,0.0);
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            //background-color:$purple;
+                            display: inline-block;
+                            margin: 20px 5px;
+                            overflow: hidden;
+                            position: relative;
+
+                            a.bx-pager-link {
+                                color: transparent;
+                                background-color: rgba(#FFFFFF,0.5);
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                @include transition($t1);
+
+                                &.active {
+                                    background-color: #FFFFFF;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .LWfeatureContentWrapper {
+            order: 2;
+            width: 100%;
+
+            h4.featureTitle {
+                font-size: 30px;
+                font-weight: bold;
+                margin-top: 20px;
+            }
+
+            .LWlinkButton {
+                padding: 10px 20px;
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 60px;
+                display: block;
+                font-size: 24px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .lostWorldButton {
+                /*color: #FFFFFF;
+                border-color: #FFFFFF;*/
+                padding: 20px 40px;
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 60px;
+                display: block;
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;
+                cursor: pointer;
+                font-family: 'StagSans',sans-serif;
+
+                a {
+                    color: inherit;
+                }
+            }
+
+            .LWFeatureBodyWrapper {
+                display: flex;
+
+
+
+                .LWfeatureContentLeft {
+                    font-size: 20px;
+
+                    p {
+                        font-family: 'StagSans-Light',sans-serif;
+                    }
+
+                    strong {
+                        font-family: 'StagSans',sans-serif;
+                    }
+
+                    table {
+                        //border: 2px solid $LWmidGreen;
+                        border-spacing: 0 5px;
+
+                        tr, th {
+                            display: flex;
+                            margin-bottom: 5px;
+
+                            td {
+                                padding: 10px;
+                                background-color: $LWlightYellow;
+                                color: $LWmidGreen;
+                                border-collapse: separate;
+                                border-spacing: 0 3px;
+
+                                &:nth-child(even) {
+                                    background-color: $LWyellow;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .LWFeatureContentRight {
+                    margin: 0 0 0 40px;
+
+                    .LWfileAttachment {
+                        padding: 50px 5px 50px 5px;
+                        background-color: #FFFFFF;
+                        @include transform(rotate(5deg));
+                        text-transform: uppercase;
+                        font-family: 'StagSans-Semibold';
+                        font-size: 30px;
+                        color: $textDark;
+                        @include transition($t1);
+
+                        &:hover {
+                            color: $LWmidGreen;
+                            @include transform(rotate(10deg));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

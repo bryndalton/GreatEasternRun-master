@@ -1,0 +1,63 @@
+﻿body {
+}
+
+.mailChimpForm {
+	background: #E9E8E6 !important;
+}
+
+#mc_embed_signup {
+	background: #E9E8E6 !important;
+
+	h2 {
+		font-size: 30px;
+		font-family: StagSansLight !IMPORTANT;
+		font-weight: normal;
+	}
+
+	font-family: AvenirBook, 'Nunito', arial, sans-serif;
+
+	label {
+		font-weight: bold;
+	}
+
+	input {
+		margin: 0.5em 0;
+		border: 1px solid #bbb;
+		border-top-color: rgb(187, 187, 187);
+		border-top-style: solid;
+		border-top-width: 1px;
+		border-right-color: rgb(187, 187, 187);
+		border-right-style: solid;
+		border-right-width: 1px;
+		border-bottom-color: rgb(187, 187, 187);
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		border-left-color: rgb(187, 187, 187);
+		border-left-style: solid;
+		border-left-width: 1px;
+		border-image-source: initial;
+		border-image-slice: initial;
+		border-image-width: initial;
+		border-image-outset: initial;
+		border-image-repeat: initial;
+		border-radius: 0px;
+	}
+
+	input[type="submit"] {
+		background: #6E2A8D;
+		color: #fff;
+	}
+}
+
+div#mce-responses {
+	margin: auto;
+	margin-left: -5px !important;
+	padding: 0px;
+}
+
+#mce-error-response, #mce-success-response {
+	background: #fff;
+	padding: 10px !important;
+	width: 100% !important;
+	margin-left: 0px;
+}

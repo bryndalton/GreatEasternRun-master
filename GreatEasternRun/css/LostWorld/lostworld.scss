@@ -1,0 +1,54 @@
+﻿.lost-world {
+    img {
+        width: 100%;
+        display: none;
+    }
+}
+
+.main.lostworld,
+.main.faq{
+    padding-top: 0;
+    position: relative;
+    margin-top: calc(19vw + 40px);
+    z-index: 3;
+
+    h4 {
+        margin-bottom:20px;
+    }
+
+    &.scrolled {
+        margin-top:100px;
+        .vivacityHeader {
+            height:0;
+        }
+        .LWheader {
+            top:0;
+        }
+    }
+}
+
+@import 'LWheader';
+@import 'LWmobilemenu.scss';
+@import 'LWfeature.scss';
+@import 'LWfaqs.scss';
+@import 'LWresponsive.scss';
+
+
+
+    @media all and (max-width:600px) {
+        .lost-world img.mobile {
+            display: block;
+        }
+    }
+
+    @media all and (min-width:601px) and (max-width:1024px) {
+        .lost-world img.tablet {
+            display: block;
+        }
+    }
+
+    @media all and (min-width: 1025px) {
+        .lost-world img.pc {
+            display: block;
+        }
+    }

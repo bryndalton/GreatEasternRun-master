@@ -1,0 +1,146 @@
+﻿section.currentRoles {
+    text-align: center;
+    padding: 0 40px 40px 40px;
+
+    p {
+        font-family: 'StagSans-Light';
+        color: $textDark;
+    }
+
+    .currentRolesInner {
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: auto;
+
+        .currentRolesItem {
+            padding: 20px;
+            width: calc(((100vw - 80px) / 3) - 59px);
+            height: calc(((100vw - 80px) / 3) - 59px);
+            max-width: 480px;
+            max-height: 480px;
+            margin: 0 0 20px 0;
+            float: left;
+            color: #FFFFFF;
+            @include purpleToPinkDiag;
+            display: flex;
+            align-items: center;
+
+            &.thingsToDo {
+                @include purpleToPinkDiag;
+
+                .currentRoleItemInner {
+                    .applyNow {
+                        &:hover {
+                            color: $purple;
+                        }
+                    }
+                }
+            }
+
+            &.gymHealth {
+                @include greenToLightGreenDiag;
+
+                .currentRoleItemInner {
+                    .applyNow {
+                        &:hover {
+                            color: $green;
+                        }
+                    }
+                }
+            }
+
+            &.theatreShows {
+                @include orangeToYellowDiag;
+
+                .currentRoleItemInner {
+                    .applyNow {
+                        &:hover {
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+
+            &.librariesArchives {
+                @include darkBlueToBlueDiag;
+
+                .currentRoleItemInner {
+                    .applyNow {
+                        &:hover {
+                            color: $darkBlue;
+                        }
+                    }
+                }
+            }
+
+            &.heritage {
+                @include darkRedToRedDiag;
+
+                .currentRoleItemInner {
+                    .applyNow {
+                        &:hover {
+                            color: $darkRed;
+                        }
+                    }
+                }
+            }
+
+            &.arts {
+                @include orangeToYellowDiag;
+
+                .currentRoleItemInner {
+                    .applyNow {
+                        &:hover {
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(3n + 2) {
+                margin: 0 20px 20px 20px;
+            }
+
+            .currentRoleItemInner {
+                width: 100%;
+
+                .currentRoleTitle {
+                    font-family: 'StagSans-Semibold';
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                }
+
+                .location {
+                    font-family: 'StagSans-Light';
+                }
+
+                .hours {
+                    font-family: 'StagSans-Light';
+                    margin-bottom: 20px;
+                }
+
+                .salary {
+                    font-family: 'StagSans-Medium';
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+
+                .applyNow {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    border: 1px solid #FFFFFF;
+                    border-radius: 30px;
+                    cursor: pointer;
+                    @include transition($t1);
+                    color: #FFFFFF;
+
+                    &:hover {
+                        color: $purple;
+                        background-color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}

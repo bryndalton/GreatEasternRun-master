@@ -1,0 +1,202 @@
+﻿/// <reference path="mixins.scss" />
+
+.ticketWrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 40px;
+    //padding-bottom: 1rem;
+    //margin-top: 3rem;
+
+    .ticketInner {
+        background-color: #F2F2F2;
+    }
+
+    .ticketInfo {
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        margin: 0 -20px;
+    }
+
+    .column {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        color: $purple;
+        font-size: 18px;
+        margin-top: 15px;
+
+        img {
+            margin: 0 15px;
+        }
+
+        & + .column {
+            border-left: 1px solid $purple;
+        }
+
+        &:first-child img {
+            margin-left: 0;
+        }
+
+        strong {
+            font-size: 22px;
+            white-space: nowrap;
+        }
+    }
+
+    iframe {
+        width: 100%;
+        display: none; //eats clicks and looks funky
+    }
+
+    .emptyMessage {
+        margin: 0;
+        padding: 2rem 0;
+        text-align: center;
+        color: $purple;
+    }
+}
+
+.ticketWrapper, .featuredInfo {
+    .dateDropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .selected {
+            padding-right: 25px;
+            cursor: pointer;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        &.open {
+            &:after {
+                transform: rotateZ(180deg);
+            }
+
+            .dropdownList {
+                display: block;
+            }
+        }
+
+        &:after {
+            display: block;
+            width: 10px;
+            height: 5px;
+            content: "";
+
+            background: {
+                image: url("/Images/downsinglechevron.svg");
+                repeat: no-repeat;
+            }
+
+            position: absolute;
+            right: 0;
+            pointer-events: none;
+            color: $purple;
+            transition: transform 0.5s ease;
+        }
+
+        .dropdownList {
+            background-color: #FFF;
+            margin: 0;
+            z-index: 1;
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            display: none;
+            padding: 0;
+            //right: 0;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+            margin-top: 10px;
+            min-width: 100%;
+            transform: translateX(-50%);
+            left: calc(50% - 23px); //minus half of the icon
+            right: auto;
+            max-height: 250px;
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $purple;
+            }
+
+            li {
+                display: flex;
+                padding: 0.5rem;
+                font-size: 16px;
+                justify-content: space-between;
+                cursor: pointer;
+                white-space: nowrap;
+                transition: background-color 0.2s ease, color 0.2s ease;
+
+                .availability {
+                    margin-left: 1rem;
+                }
+
+                &:hover {
+                    background-color: $purple;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
+
+.featuredInfo {
+    .dateTime {
+        .dateDropdown {
+            margin-left: 1rem;
+            width: 100%;
+            margin-top: 0;
+            color: $purple;
+        }
+    }
+
+    .dateDropdown {
+        margin-top: 1rem;
+        color: $purple;
+
+        .selected {
+            border: 1px solid $purple;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+
+        &:after {
+            right: 15px;
+        }
+
+        .dropdownList {
+            margin-top: 0;
+            left: 0;
+            transform: none;
+            border: 1px solid $purple;
+            border-radius: 20px;
+            box-sizing: border-box;
+
+            li {
+                padding: 10px 20px;
+            }
+        }
+
+        &.open {
+            .selected {
+                border-bottom: 0;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            .dropdownList {
+                border-top: 0;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+    }
+}

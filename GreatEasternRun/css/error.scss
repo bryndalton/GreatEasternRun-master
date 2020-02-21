@@ -1,0 +1,119 @@
+﻿section.errorHeader {
+    display: block;
+    min-height: calc(100vh - 120px);
+    padding: 0px 40px 0 40px;
+    overflow:hidden;
+
+    .errorHeaderInner {
+        width: 100%;
+        height: calc(100vh - 160px);
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+
+        @include purpleToPinkDiag;
+
+        .errorTitles {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translateX(-50%) translateY(-50%));
+            width: 100%;
+            text-align: center;
+
+            .errorOops {
+                font-size: 23vw;
+                color: #FFFFFF;
+                font-family: 'Stag-Semibold';
+            }
+
+            .errorTitle {
+                font-size: 40px;
+                color: #FFFFFF;
+                font-family: 'Stag-Semibold';
+                margin-bottom: 20px;
+            }
+
+            .errorSubtitle {
+                font-size: 24px;
+                color: #FFFFFF;
+                font-family: 'StagSans-Book';
+                margin-bottom: 20px;
+            }
+
+            .goToHomePage {
+                padding: 10px 20px;
+                border: 2px solid #FFFFFF;
+                border-radius: 30px;
+                color: #FFFFFF;
+                cursor: pointer;
+                @include transition($t1);
+                position: relative;
+                display: inline-block;
+
+                &:hover {
+                    background-color: #FFFFFF;
+                    color: $purple;
+                }
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+            background-color: #FFFFFF;
+        }
+    }
+
+    &.comingSoon {
+        margin-top: 2rem;
+
+        .errorHeaderInner .errorTitles {
+            .errorOops {
+                font-size: 18vw;
+                line-height: 15vw;
+            }
+
+            .errorSubtitle {
+                a {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+
+    &.thingsToDo {
+
+        @include purpleToPinkDiag;
+    }
+
+    &.gymHealth {
+
+        @include greenToLightGreenDiag;
+    }
+
+    &.theatreShows {
+
+        @include orangeToYellowDiag;
+    }
+
+    &.librariesArchives {
+
+        @include darkBlueToBlueDiag;
+    }
+
+    &.heritage {
+
+        @include darkRedToRedDiag;
+    }
+
+    &.arts {
+
+        @include orangeToYellowDiag;
+    }
+}

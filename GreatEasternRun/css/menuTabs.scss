@@ -1,0 +1,181 @@
+﻿/// <reference path="mixins.scss" />
+
+section.menuTabs {
+    padding: 40px 40px 0 40px;
+    overflow: visible;
+
+    .menuTabsWrapper {
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        display: flex;
+        text-align: center;
+
+        .menuTab {
+            width: 100%;
+            padding: 20px;
+            border: 1px solid $purple;
+            text-align: center;
+            color: $purple;
+            font-family: 'StagSans-Book';
+            @include transition($t1);
+            cursor: pointer;
+            position: relative;
+
+            &.active, &:hover {
+                @include purpleToPink;
+                color: #FFFFFF;
+            }
+
+            & + .menuTab {
+                margin-left: 10px;
+            }
+
+            &.dropdown {
+                a {
+                    color: inherit;
+                }
+
+                svg {
+                    width: 20px;
+                    height: 15px;
+                    margin-left: 0.5rem;
+                    fill: currentColor;
+                    transition: transform 0.2s ease;
+                    pointer-events: none;
+                }
+
+                &.open {
+                    svg {
+                        transform: rotateZ(180deg);
+                    }
+                }
+
+                .dropdownWrapper {
+                    display: none;
+                    position: absolute;
+                    top: 58px; //hide top border
+                    width: 100%;
+                    left: -1px; //border
+                    transition: visibility 0.2s ease, opacity 0.2s ease;
+                    border: 1px solid $purple;
+                    z-index: 1;
+
+                    .menuTab {
+                        display: block;
+                        margin-left: 0;
+                        background-color: #FFF;
+                        text-align: left;
+                        border: 0;
+                        width: calc(100% - 40px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    &.thingsToDo {
+        section.menuTabs {
+            .menuTabsWrapper {
+                .menuTab {
+                    color: $purple;
+
+                    &, .dropdownWrapper {
+                        border: 1px solid $purple;
+                    }
+
+                    &.active, &:hover {
+                        @include purpleToPink;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    &.gymHealth {
+        section.menuTabs {
+            .menuTabsWrapper {
+                .menuTab {
+                    color: $green;
+
+                    &, .dropdownWrapper {
+                        border: 1px solid $green;
+                    }
+
+                    &.active, &:hover {
+                        @include greenToLightGreen;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    &.theatreShows, &.arts {
+        section.menuTabs {
+            .menuTabsWrapper {
+                .menuTab {
+                    color: $orange;
+
+                    &, .dropdownWrapper {
+                        border: 1px solid $orange;
+                    }
+
+                    &.active, &:hover {
+                        @include orangeToYellow;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    &.librariesArchives {
+        section.menuTabs {
+            .menuTabsWrapper {
+                .menuTab {
+                    color: $darkBlue;
+
+                    &, .dropdownWrapper {
+                        border: 1px solid $darkBlue;
+                    }
+
+                    &.active, &:hover {
+                        @include darkBlueToBlue;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    &.heritage {
+        section.menuTabs {
+            .menuTabsWrapper {
+                .menuTab {
+                    color: $darkRed;
+
+                    &, .dropdownWrapper {
+                        border: 1px solid $darkRed;
+                    }
+
+                    &.active, &:hover {
+                        @include darkRedToRed;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}

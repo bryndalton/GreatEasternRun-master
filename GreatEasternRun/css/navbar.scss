@@ -1,0 +1,275 @@
+﻿/// <reference path="mixins.scss" />
+
+body.hasAnnouncement {
+    header.header {
+        .newsFlash {
+            height: auto;
+        }
+    }
+}
+
+header.header {
+    background-color: #FFFFFF;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    overflow-y: auto;
+    overflow-x: hidden;
+    //@include transition($t1);
+
+    .newsFlash {
+        width: 100%;
+        height: 0;
+        background-color: $purple;
+        color: #FFFFFF;
+        position: relative;
+        font-size: 20px;
+        order: 2;
+        overflow: hidden;
+        @include transition($t1);
+        //opacity:0;
+
+        .newsFlashWrapper {
+            padding: 26px 94px 26px 40px;
+        }
+
+        .newsFlashClose {
+            position: absolute;
+            right: 40px;
+            top: 50%;
+            @include transform(translateY(-50%));
+            width: 30px;
+            height: 30px;
+            border: 2px solid #FFFFFF;
+            border-radius: 50%;
+            @include transition($t1);
+            cursor: pointer;
+            //position: relative;
+            svg {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                @include transform(translateX(-50%) translateY(-50%));
+                width: 60%;
+
+                path {
+                    fill: #FFFFFF;
+                    @include transition($t1);
+                }
+            }
+
+            &:hover {
+                background-color: #FFFFFF;
+
+                svg {
+                    path {
+                        fill: $purple;
+                    }
+                }
+            }
+        }
+    }
+
+    .searchIconWrapper {
+        width: 100%;
+        padding: 35px 0 0 0;
+    }
+
+    .logoMenuWrapper {
+        display: flex;
+        padding: 0px 40px 0px 40px;
+        max-width: 1680px;
+        margin: 0 auto;
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .searchIconWrapper {
+            width: 100%;
+            display: flex;
+            z-index:2;
+
+            .searchIcon {
+                width: 40px;
+                height: 40px;
+                background-image: url(../Images/magnifyingglass.svg);
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+
+            #basketIcon {
+                display: none;
+                width: 40px;
+                height: 30px;
+                margin-left: 1rem;
+                background-image: url(../Images/basket.png);
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+                position: relative;
+
+                .items {
+                    position: absolute;
+                    right: 0;
+                    bottom: -5px;
+                    background-color: $purple;
+                    border-radius: 50%;
+                    color: #FFF;
+                    font-size: 14px;
+                    width: 20px;
+                    height: 20px;
+                    line-height: 20px;
+                    text-align: center;
+                }
+
+                &.show {
+                    display: inline-block;
+                }
+            }
+
+            #basketValue {
+                display: none;
+                line-height: 40px;
+                margin-left: 0.5rem;
+                color: $purple;
+                vertical-align: top;
+
+                &.show {
+                    display: inline-block;
+                }
+            }
+        }
+
+        .logoWrapper {
+            width: 100%;
+            text-align: center;
+            margin: 20px 20px 20px 20px;
+            order: 1;
+
+            .logo {
+                width: 200px;
+                display: inline-block;
+                height: 56px;
+                background-image: url(../Images/vivacity-logo-colour.svg);
+                background-size: contain;
+                background-position: left center;
+                background-repeat: no-repeat;
+            }
+
+            .presents {
+                background-image: url(../Images/presents.svg);
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+                height: 20px;
+            }
+        }
+
+        .navIcons {
+            width: 100%;
+            text-align: right;
+            white-space: nowrap;
+            order: 3;
+            margin: 20px 0px 0px 0;
+            position: relative;
+
+            .contactUs {
+                border: 2px solid $purple;
+                border-radius: 30px;
+                padding: 10px 10px;
+                display: inline-block;
+                margin: 20px 0 20px 5px;
+                vertical-align: top;
+                @include transition($t1);
+                cursor: pointer;
+                color: $purple;
+                font-weight: bold;
+                font-family: 'StagSans-Semibold';
+
+                &:hover {
+                    background-color: $purple;
+                    border: 2px solid $purple;
+                    color: #FFFFFF;
+                }
+            }
+
+            .navIcon {
+                display: inline-block;
+                margin: 20px 0 20px 5px;
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+                vertical-align: top;
+                cursor: pointer;
+                background-color: $purple;
+                border-radius: 10px;
+                box-sizing: border-box;
+
+
+                svg {
+                    @include transition($t1);
+
+                    path {
+                        @include transition($t1);
+                        cursor: pointer;
+                        fill: #FFFFFF;
+                    }
+                }
+
+
+
+                &:hover {
+                    background-color: #FFFFFF;
+                    border: 2px solid $purple;
+
+                    svg path {
+                        fill: $purple;
+                    }
+                }
+
+                &.facebook {
+                    svg {
+                        margin-top: 6px;
+                    }
+                }
+
+                &.twitter {
+                    text-align: center;
+
+                    svg {
+                        width: 90%;
+                        top: 4px;
+                        position: relative;
+                    }
+                }
+            }
+
+            .menuIcon {
+                position: relative;
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+                margin: 20px 0 20px 20px;
+                cursor: pointer;
+
+                @include transition($t1);
+                cursor: pointer;
+                padding-top: 4px;
+
+                svg path {
+                    fill: $purple;
+                    @include transition($t1);
+                }
+
+                &:hover svg path {
+                    fill: $pink;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+body {
+}
+
+/**umb_name:Lost World Button*/
+.lostWorldButton {
+	color: #FFFFFF;
+	border-color: #FFFFFF;
+	padding: 20px 40px;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 60px;
+	display: inline-block;
+	font-size: 24px;
+	font-weight: bold;
+}

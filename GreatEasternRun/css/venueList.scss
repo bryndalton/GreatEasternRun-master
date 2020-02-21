@@ -1,0 +1,184 @@
+﻿section.venueList {
+	padding: 40px;
+
+	.venueListInner {
+		width: auto;
+		max-width: 1920px;
+		margin: 0 auto;
+		text-align: center;
+
+		.venueListItem {
+			width: 300px;
+			display: inline-block;
+			//flex-direction: column;
+			//float:left;
+			margin: 0 2px 20px 2px;
+			vertical-align: top;
+
+			.venueListImageWrapper {
+				height: 185px;
+				position: relative;
+				overflow: hidden;
+
+				.venueListImage {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background-size: cover;
+					background-position: center center;
+					@include transition($t1);
+				}
+
+				/*&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 30px;
+					height: 30px;
+					clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+				}*/
+
+				&:hover {
+					.venueListImage {
+						//@include transform(scale(1.2));
+					}
+				}
+			}
+
+			.venueListInfo {
+				padding: 15px 20px;
+				background-color: $veryLightGrey;
+
+				.venueTitle {
+					color: $textDark;
+					padding: 0 0 20px;
+					font-size: 18px;
+					text-align: center;
+					height: 62px;
+				}
+
+				.keyFeatures {
+					color: $textDark;
+					margin: 0 0 20px 0;
+				}
+
+				.featuresList {
+					font-family: 'StagSans-Book';
+					color: $textDark;
+					font-size: 16px;
+					line-height: 21px;
+					column-count: 2;
+					@include column-gap(0);
+					height: 150px;
+
+
+					.featuresListItem {
+						display: flex;
+						margin: 0 5px 5px 0;
+						-webkit-column-break-inside: avoid; /* Chrome, Safari */
+						page-break-inside: avoid; /* Theoretically FF 20+ */
+						break-inside: avoid-column;
+
+						.icon {
+							width: 24px;
+							min-width: 24px;
+							max-width: 24px;
+							height: 24px;
+							background-size: 60% auto;
+							background-position: left center;
+							background-repeat: no-repeat;
+							display: inline-block
+						}
+
+						.title {
+							flex-direction: column;
+							align-items: start;
+							justify-content: center;
+							display: flex;
+							text-align: left;
+						}
+					}
+				}
+			}
+
+			&.thingsToDo {
+				.venueListImageWrapper {
+					border-bottom: 3px solid $purple;
+
+					&:after {
+						@include purpleToPinkDiag;
+					}
+				}
+			}
+
+			&.gymHealth {
+				.venueListImageWrapper {
+					border-bottom: 3px solid $green;
+
+					&:after {
+						@include greenToLightGreenDiag;
+					}
+				}
+			}
+
+			&.theatreShows {
+				.venueListImageWrapper {
+					border-bottom: 3px solid $orange;
+
+					&:after {
+						@include orangeToYellowDiag;
+					}
+				}
+			}
+
+			&.librariesArchives {
+				.venueListImageWrapper {
+					border-bottom: 3px solid $darkBlue;
+
+					&:after {
+						@include darkBlueToBlueDiag;
+					}
+				}
+			}
+
+			&.heritage {
+				.venueListImageWrapper {
+					border-bottom: 3px solid $darkRed;
+
+					&:after {
+						@include darkRedToRedDiag;
+					}
+				}
+			}
+
+			&.arts {
+				.venueListImageWrapper {
+					border-bottom: 3px solid $orange;
+
+					&:after {
+						@include orangeToYellowDiag;
+					}
+				}
+			}
+
+			.moreAboutVenue {
+				border: 2px solid $purple;
+				background-color: $purple;
+				color: #FFFFFF;
+				text-align: center;
+				padding: 12px 20px;
+				display: block;
+				cursor: pointer;
+				@include transition($t1);
+				font-size: 16px;
+				line-height: 21px;
+
+				&:hover {
+					background-color: #FFFFFF;
+					color: $purple;
+				}
+			}
+		}
+	}
+}

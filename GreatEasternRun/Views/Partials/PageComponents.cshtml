@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModel>
+@using Umbraco.Core;
+@using Umbraco.Web;
+@using Umbraco.Web.Models;
+@using Newtonsoft.Json.Linq;
+@using Vivacity19.Helpers;
+
+@{
+	var contentService = Services.ContentService;
+	if (Model.Content.Children.Where(x => x.IsDocumentType("PageComponents")).Count() > 0)
+	{
+		var pageComponentsNode = Model.Content.Children.Where(x => x.IsDocumentType("PageComponents")).First();
+
+		foreach (var section in pageComponentsNode.Children.OrderBy(x => x.SortOrder))
+		{
+			string lsNodeTypeAlias = section.ContentType.Alias;
+
+			switch (lsNodeTypeAlias)
+			{
+				case "someAliasHere":
+					@Html.Partial("~/views/Partials/somePartialHere.cshtml", @section)
+					break;
+			}
+		}
+	}
+}

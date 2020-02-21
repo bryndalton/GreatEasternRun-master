@@ -1,0 +1,68 @@
+﻿section.whyJoin {
+    padding: 0px 40px 0 40px;
+
+    .whyJoinInner {
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        display: flex;
+        border-bottom: 1px solid $purple;
+
+        padding:0 0 40px 0;
+
+        .whyJoinItem {
+            padding: 20px;
+            width: 100%;
+            height: calc(((100vw - 80px) / 5) - 40px);
+            max-height:344px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            //flex-direction: column;
+            .whyJoinInfo {
+                margin:0 auto;
+                .whyJoinIcon {
+                    width: 5vw;
+                    height: 5vw;
+                    margin: 0 auto 20px auto;
+                    background-size: 60% auto;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-color: #FFFFFF;
+                    border-radius: 50%;
+                }
+
+                .whyJoinTitle {
+                    margin: 0 0 20px 0;
+                    font-family: 'StagSans-medium';
+                }
+
+                .whyJoinDesc {
+                    font-family: 'StagSans-Light';
+
+                    p {
+                        margin: 20px 0 0 0;
+                    }
+                }
+            }
+
+            &:nth-child(odd) {
+                background-color: $purple;
+                color: #FFFFFF;
+
+                p {
+                    color: #FFFFFF;
+                }
+            }
+
+            &:nth-child(even) {
+                background-color: #FFFFFF;
+                color: $purple;
+
+                p {
+                    color: $purple;
+                }
+            }
+        }
+    }
+}

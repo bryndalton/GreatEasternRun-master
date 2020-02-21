@@ -1,0 +1,93 @@
+﻿section.volunteer {
+    padding:40px;
+    .volunteerInner {
+        width:100%;
+        max-width:1920px;
+        margin:0 auto;
+        p {
+            font-family:'StagSans-Light';
+            color:$textDark;
+            text-align:center;
+        }
+        
+    }
+}
+
+.didYouKnow {
+    padding:0 40px;
+    .didYouKnowInner {
+        display: flex;
+        background-color: $purple;
+        color: #FFFFFF;
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+
+        .didYouKnowLeft {
+            padding: 20px;
+            max-width: 300px;
+            width: 33%;
+            min-height: 25vw;
+
+            .didYouKnowIcon {
+                width: 60px;
+                height: 60px;
+                background-image: url(../Images/lightbulb.svg);
+                background-size: contain;
+                background-position: left center;
+                background-repeat: no-repeat;
+                margin: 0 auto 20px 0;
+            }
+
+            .didYouKnowTitle {
+                font-family: 'StagSans-Semibold';
+                font-size: 40px;
+            }
+        }
+
+        .didYouKnowRight {
+            width: 100%;
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+
+    .didYouKnowList {
+        display: flex;
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto 40px auto;
+        padding: 0 0 40px 0;
+        border-bottom: 1px solid $purple;
+
+
+        .didYouKnowListItem {
+            width: 100%;
+            text-align: center;
+            color: $purple;
+            margin:0 20px;
+
+            &:nth-child(1) {
+                padding: 0 20px 0 0;
+            }
+
+            &:nth-child(2) {
+                padding: 0 20px 0 20px;
+            }
+
+            &:nth-child(3) {
+                padding: 0 0 0 20px;
+            }
+
+            h5 {
+                font-family: 'StagSans-Book';
+            }
+
+            p {
+                color: $purple;
+                font-family: 'StagSans-Light';
+                margin:20px 0;
+            }
+        }
+    }
+}

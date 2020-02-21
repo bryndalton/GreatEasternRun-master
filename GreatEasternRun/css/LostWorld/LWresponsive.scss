@@ -1,0 +1,116 @@
+﻿@media all and (min-width:450px) {
+    .LWfeature {
+        .LWfeatureInner {
+            .LWfeatureContentWrapper {
+                .LWlinkButton, .lostWorldButton {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width:768px) {
+    .LWmobileMenu {
+        width: unset;
+        .LWmobileMenuInner {
+            display:flex;
+        }
+    }
+    .LWfeature {
+        .LWfeatureInner {
+            .LWmainImageWrapper {
+
+                iframe {
+                    display: block;
+                }
+
+                &.placeHolderImage {
+                    display:none;
+                    
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width:1000px){
+    .LWheader {
+        .LWbookNowBtn {
+            width:90px;
+            border-radius:30px;
+        }
+    }
+    .LWfeature {
+        .LWfeatureInner {
+            display: flex;
+            flex-direction: row;
+
+            .LWmainImageWrapper {
+                order: unset;
+
+                &.Left {
+                    margin-right: 40px;
+                }
+
+                &.Right {
+                    margin-left: 40px;
+                }
+            }
+
+            .LWmainImage {
+                order: unset;
+            }
+
+            .LWfeatureContentWrapper {
+                order: unset;
+
+                h4.featureTitle {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width:1280px) {
+
+    .main.scrolled {
+        .LWmobileMenu {
+            //height: calc(100% - 168px);
+            top: calc(100px);
+        }
+    }
+    .main.lostworld {
+        margin-top:210px;
+    }
+    .vivacityHeader {
+        height:110px;
+        .vivacityHeaderInner {
+            height:110px;
+        }
+    }
+    .LWheader {
+        height:60px;
+        top:110px;
+    }
+    .LWmobileMenu {
+        top: 210px;
+
+        .LWmobileMenuInner {
+            .LWmobileMenuClose {
+                right: 0px;
+                height: 100px;
+            }
+        }
+    }
+}
+
+@media all and (min-width:1680px) {
+    .LWmobileMenu {
+        
+        &.visible {
+            right: calc((100vw - 1700px) / 2);
+        }
+    }
+}

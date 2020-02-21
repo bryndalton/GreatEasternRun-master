@@ -1,0 +1,31 @@
+
+
+/**umb_name:H4*/
+h4 {
+	font-size: 30px;
+	font-family: 'StagSans-Semibold', sans-serif;
+	font-weight:900;
+	color: #6E2A8D;
+}
+
+/**umb_name:H5*/
+h5 {
+	font-size: 20px;
+	font-family: 'StagSans-Semibold', sans-serif;
+	font-weight:900;
+	color: #6E2A8D;
+}
+
+/**umb_name:Lost World Button*/
+.lostWorldButton {
+    color: #666666;
+    border-color: #666666;
+    padding: 20px 40px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 60px;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+
+}
